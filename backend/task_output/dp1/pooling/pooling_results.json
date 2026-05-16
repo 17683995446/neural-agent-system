@@ -1,0 +1,56 @@
+{
+  "task_id": "dp1",
+  "layer": "pooling",
+  "user_requirement": "test",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "process",
+          "line": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "App",
+          "line": 7
+        }
+      ],
+      "imports": [
+        "import os"
+      ],
+      "summary": "一个简单的Python应用文件，包含一个处理函数和一个App类。os模块被导入但未使用，process函数接收数据并直接返回，App类有一个run方法（暂未实现）。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp69b01uol\\app.py",
+      "task_id": "dp1",
+      "analyzed_at": "2026-05-03T08:25:25.069694",
+      "total_lines": 9,
+      "analyzed_by": "llm",
+      "llm_summary": "在代码分析结果中找到1个文件app.py，包含process函数和App类。该文件未直接包含与'test'相关的测试代码，但包含了应用的核心功能实现。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 1,
+    "total_functions": 1,
+    "total_classes": 1,
+    "unique_imports": [
+      "import os"
+    ],
+    "top_functions": [
+      {
+        "name": "process",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp69b01uol\\app.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "App",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp69b01uol\\app.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 1,
+  "created_at": "2026-05-03T08:25:45.862093"
+}

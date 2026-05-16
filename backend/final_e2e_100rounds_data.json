@@ -1,0 +1,199 @@
+{
+  "title": "全链路端到端验证报告 — 100轮迭代",
+  "timestamp": "2026-05-03T11:22:09.046929",
+  "config": {
+    "cheap_llm_mode": true,
+    "model": "MiniMax-M2.5",
+    "api_base": "https://aigw-gzgy2.cucloud.cn:8443",
+    "api_key_set": true,
+    "cpu_count": 12,
+    "pool_workers": 32
+  },
+  "agent_llm": {
+    "results": {
+      "卷积-CheapLLM": {
+        "agent": "卷积-CheapLLM",
+        "connected": false,
+        "time_ms": 1077.7628421783447,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "池化-CheapLLM": {
+        "agent": "池化-CheapLLM",
+        "connected": false,
+        "time_ms": 1043.8728332519531,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "FC1-CheapLLM": {
+        "agent": "FC1-CheapLLM",
+        "connected": false,
+        "time_ms": 1106.6868305206299,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "FC2-CheapLLM": {
+        "agent": "FC2-CheapLLM",
+        "connected": false,
+        "time_ms": 1066.3163661956787,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "FC3-CheapLLM": {
+        "agent": "FC3-CheapLLM",
+        "connected": false,
+        "time_ms": 1010.9405517578125,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "输出-CheapLLM": {
+        "agent": "输出-CheapLLM",
+        "connected": false,
+        "time_ms": 1028.91206741333,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "反向传播-CheapLLM": {
+        "agent": "反向传播-CheapLLM",
+        "connected": false,
+        "time_ms": 1073.289155960083,
+        "model": "MiniMax-M2.5",
+        "error": null,
+        "text": ""
+      },
+      "卷积-普通LLM": {
+        "agent": "卷积-普通LLM",
+        "connected": true,
+        "time_ms": 5650.853872299194,
+        "model": "MiniMax-M2.5",
+        "error": "403 Client Error: Forbidden for url: https://aigw-gzgy2.cucloud.cn:8443/v1/chat/completions",
+        "text": ""
+      },
+      "FC1-普通LLM": {
+        "agent": "FC1-普通LLM",
+        "connected": true,
+        "time_ms": 5683.232069015503,
+        "model": "MiniMax-M2.5",
+        "error": "403 Client Error: Forbidden for url: https://aigw-gzgy2.cucloud.cn:8443/v1/chat/completions",
+        "text": ""
+      },
+      "FC2-普通LLM": {
+        "agent": "FC2-普通LLM",
+        "connected": true,
+        "time_ms": 5508.119821548462,
+        "model": "MiniMax-M2.5",
+        "error": "403 Client Error: Forbidden for url: https://aigw-gzgy2.cucloud.cn:8443/v1/chat/completions",
+        "text": ""
+      },
+      "FC3-普通LLM": {
+        "agent": "FC3-普通LLM",
+        "connected": true,
+        "time_ms": 6102.820873260498,
+        "model": "MiniMax-M2.5",
+        "error": "403 Client Error: Forbidden for url: https://aigw-gzgy2.cucloud.cn:8443/v1/chat/completions",
+        "text": ""
+      },
+      "反向传播-普通LLM": {
+        "agent": "反向传播-普通LLM",
+        "connected": true,
+        "time_ms": 5949.382066726685,
+        "model": "MiniMax-M2.5",
+        "error": "403 Client Error: Forbidden for url: https://aigw-gzgy2.cucloud.cn:8443/v1/chat/completions",
+        "text": ""
+      }
+    },
+    "connected": 5,
+    "total": 12
+  },
+  "component_tests": {
+    "circuit_breaker_opens": true,
+    "circuit_breaker_resets": true,
+    "cache_hit": true,
+    "cache_miss": true,
+    "cheap_profile": true,
+    "agent_pool_enabled": true,
+    "high_qps": true,
+    "high_concurrent": true,
+    "pool_dispatch": true
+  },
+  "iteration": {
+    "iterations": 100,
+    "success": 0,
+    "fail": 100,
+    "success_rate": 0.0,
+    "total_llm_calls": 500,
+    "total_llm_ok": 0,
+    "llm_success_rate": 0.0,
+    "total_elapsed_s": 40.7,
+    "throughput_calls_per_s": 12.3,
+    "throughput_rounds_per_s": 2.46,
+    "round_time_stats": {
+      "mean_ms": 2979.6,
+      "median_ms": 2956.1,
+      "p95_ms": 3560.7
+    },
+    "agent_summary": {
+      "conv": {
+        "calls": 100,
+        "ok": 0,
+        "fail": 100,
+        "success_rate": 0.0,
+        "avg_ms": 2576.5,
+        "min_ms": 1504.5,
+        "max_ms": 4123.9,
+        "median_ms": 2579.6,
+        "p95_ms": 3412.1
+      },
+      "fc1": {
+        "calls": 100,
+        "ok": 0,
+        "fail": 100,
+        "success_rate": 0.0,
+        "avg_ms": 2552.4,
+        "min_ms": 1744.8,
+        "max_ms": 3538.8,
+        "median_ms": 2569.5,
+        "p95_ms": 3330.9
+      },
+      "fc2": {
+        "calls": 100,
+        "ok": 0,
+        "fail": 100,
+        "success_rate": 0.0,
+        "avg_ms": 2501.6,
+        "min_ms": 1453.2,
+        "max_ms": 3949.2,
+        "median_ms": 2479.2,
+        "p95_ms": 3231.7
+      },
+      "fc3": {
+        "calls": 100,
+        "ok": 0,
+        "fail": 100,
+        "success_rate": 0.0,
+        "avg_ms": 2581.1,
+        "min_ms": 1360.3,
+        "max_ms": 3843.8,
+        "median_ms": 2521.6,
+        "p95_ms": 3467.8
+      },
+      "output": {
+        "calls": 100,
+        "ok": 0,
+        "fail": 100,
+        "success_rate": 0.0,
+        "avg_ms": 2571.7,
+        "min_ms": 1576.2,
+        "max_ms": 3542.0,
+        "median_ms": 2535.2,
+        "p95_ms": 3271.2
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "task_id": "interactive_task_002",
+  "layer": "convolution",
+  "total_files": 4,
+  "analyzed_files": [
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\interactive_repo_fraf2ied\\src\\api.py",
+      "language": "unknown",
+      "total_lines": 23,
+      "functions": [
+        {
+          "name": "handle_request",
+          "line": 3
+        },
+        {
+          "name": "parse_response",
+          "line": 16
+        },
+        {
+          "name": "format_error",
+          "line": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import json"
+      ],
+      "task_id": "interactive_task_002",
+      "analyzed_at": "2026-05-01T22:09:30.041901"
+    },
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\interactive_repo_fraf2ied\\src\\database.py",
+      "language": "unknown",
+      "total_lines": 44,
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 5
+        },
+        {
+          "name": "connect",
+          "line": 11
+        },
+        {
+          "name": "disconnect",
+          "line": 15
+        },
+        {
+          "name": "query",
+          "line": 18
+        },
+        {
+          "name": "execute",
+          "line": 23
+        },
+        {
+          "name": "__init__",
+          "line": 30
+        },
+        {
+          "name": "find_by_id",
+          "line": 33
+        },
+        {
+          "name": "find_all",
+          "line": 36
+        },
+        {
+          "name": "save",
+          "line": 39
+        },
+        {
+          "name": "delete",
+          "line": 42
+        }
+      ],
+      "classes": [
+        {
+          "name": "DatabaseConnection",
+          "line": 3
+        },
+        {
+          "name": "Repository",
+          "line": 28
+        }
+      ],
+      "imports": [
+        "from typing import List, Optional"
+      ],
+      "task_id": "interactive_task_002",
+      "analyzed_at": "2026-05-01T22:09:30.042897"
+    },
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\interactive_repo_fraf2ied\\src\\main.py",
+      "language": "unknown",
+      "total_lines": 35,
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 4
+        },
+        {
+          "name": "validate_input",
+          "line": 11
+        },
+        {
+          "name": "transform",
+          "line": 15
+        },
+        {
+          "name": "load_file",
+          "line": 19
+        },
+        {
+          "name": "save_file",
+          "line": 24
+        },
+        {
+          "name": "calculate_stats",
+          "line": 29
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import os",
+        "import sys"
+      ],
+      "task_id": "interactive_task_002",
+      "analyzed_at": "2026-05-01T22:09:30.043620"
+    },
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\interactive_repo_fraf2ied\\src\\models.py",
+      "language": "unknown",
+      "total_lines": 34,
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 5
+        },
+        {
+          "name": "to_dict",
+          "line": 9
+        },
+        {
+          "name": "validate",
+          "line": 12
+        },
+        {
+          "name": "__init__",
+          "line": 17
+        },
+        {
+          "name": "to_dict",
+          "line": 21
+        },
+        {
+          "name": "__init__",
+          "line": 26
+        },
+        {
+          "name": "get",
+          "line": 29
+        },
+        {
+          "name": "set",
+          "line": 32
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataModel",
+          "line": 3
+        },
+        {
+          "name": "ResultModel",
+          "line": 15
+        },
+        {
+          "name": "ConfigModel",
+          "line": 24
+        }
+      ],
+      "imports": [
+        "from typing import Optional, List, Dict"
+      ],
+      "task_id": "interactive_task_002",
+      "analyzed_at": "2026-05-01T22:09:30.044149"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 27,
+    "total_classes": 5
+  },
+  "created_at": "2026-05-01T22:09:30.044169"
+}

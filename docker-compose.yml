@@ -1,0 +1,300 @@
+version: '3.8'
+
+services:
+  # 核心API服务
+  api-server:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/neural_agent
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - MILVUS_URL=http://milvus-standalone:19530
+      - LITELLM_API_KEY=${LITELLM_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      milvus-standalone:
+        condition: service_healthy
+    volumes:
+      - /d/claude_workspace/neural-agent-system/task_output:/app/task_output
+      - /d/claude_workspace/neural-agent-system/code_repos:/app/code_repos
+      - /d/claude_workspace/neural-agent-system/logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # Agent调度服务
+  agent-worker:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    command: celery -A core.worker worker --loglevel=info --concurrency=10
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/neural_agent
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - MILVUS_URL=http://milvus-standalone:19530
+      - LITELLM_API_KEY=${LITELLM_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      milvus-standalone:
+        condition: service_healthy
+    volumes:
+      - /d/claude_workspace/neural-agent-system/task_output:/app/task_output
+      - /d/claude_workspace/neural-agent-system/code_repos:/app/code_repos
+      - /d/claude_workspace/neural-agent-system/logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # RL训练服务（反向传播）
+  rl-trainer:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    command: python -m core.rl_trainer
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/neural_agent
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - MILVUS_URL=http://milvus-standalone:19530
+      - RAY_ADDRESS=ray:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 短期记忆存储
+  redis:
+    image: redis:7.2-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 元数据与信任度存储
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=neural_agent
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 层间消息队列
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # Milvus依赖服务 - etcd
+  etcd:
+    image: quay.io/coreos/etcd:v3.5.5
+    environment:
+      - ETCD_AUTO_COMPACTION_MODE=revision
+      - ETCD_AUTO_COMPACTION_RETENTION=1000
+      - ETCD_QUOTA_BACKEND_BYTES=4294967296
+      - ETCD_SNAPSHOT_COUNT=50000
+    volumes:
+      - etcd_data:/etcd-data
+    command: etcd -advertise-client-urls=http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 --data-dir /etcd-data
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # Milvus依赖服务 - MinIO
+  minio:
+    image: minio/minio:latest
+    environment:
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 长期记忆向量数据库
+  milvus-standalone:
+    image: milvusdb/milvus:v2.4.0
+    command: ["milvus", "run", "standalone"]
+    environment:
+      - ETCD_ENDPOINTS=etcd:2379
+      - MINIO_ADDRESS=minio:9000
+    volumes:
+      - milvus_data:/var/lib/milvus
+    depends_on:
+      etcd:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      timeout: 20s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # Ray集群（用于反向传播RL训练）
+  ray:
+    image: rayproject/ray:2.24.0
+    ports:
+      - "8265:8265"
+      - "6379:6379"
+    command: ray start --head --num-cpus=2 --memory=4g
+    healthcheck:
+      test: ["CMD", "ray", "health-check"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 监控服务 - Prometheus
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - /d/claude_workspace/neural-agent-system/docker/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 监控服务 - Grafana
+  grafana:
+    image: grafana/grafana:10.4.0
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - /d/claude_workspace/neural-agent-system/docker/grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 日志服务 - Loki
+  loki:
+    image: grafana/loki:2.9.0
+    ports:
+      - "3100:3100"
+    volumes:
+      - /d/claude_workspace/neural-agent-system/docker/loki-config.yml:/etc/loki/loki-config.yml
+      - loki_data:/loki
+    command: -config.file=/etc/loki/loki-config.yml
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+  # 日志收集 - Promtail
+  promtail:
+    image: grafana/promtail:2.9.0
+    volumes:
+      - /d/claude_workspace/neural-agent-system/logs:/var/log/app
+      - /d/claude_workspace/neural-agent-system/docker/promtail-config.yml:/etc/promtail/promtail-config.yml
+    command: -config.file=/etc/promtail/promtail-config.yml
+    depends_on:
+      - loki
+    restart: unless-stopped
+    networks:
+      - neural-agent-network
+
+volumes:
+  redis_data:
+  postgres_data:
+  rabbitmq_data:
+  etcd_data:
+  minio_data:
+  milvus_data:
+  prometheus_data:
+  grafana_data:
+  loki_data:
+
+networks:
+  neural-agent-network:
+    driver: bridge

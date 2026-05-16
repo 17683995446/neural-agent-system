@@ -1,0 +1,60 @@
+{
+  "task_id": "stress_007",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 4
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 12
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理工具模块，包含数据转换函数、输入验证函数，以及DataHandler类用于数据的加载、转换和保存操作。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\handler.py",
+      "task_id": "stress_007",
+      "analyzed_at": "2026-05-02T22:14:59.858335",
+      "total_lines": 26,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "该文件包含两个工具函数，分别用于数值翻倍和去除字符串首尾空格。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\utils.py",
+      "task_id": "stress_007",
+      "analyzed_at": "2026-05-02T22:15:00.444851",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 4,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T22:15:00.446698"
+}

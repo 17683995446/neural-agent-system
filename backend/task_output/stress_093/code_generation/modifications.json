@@ -1,0 +1,115 @@
+{
+  "task_id": "stress_093",
+  "layer": "code_generation",
+  "layer_name": "full_connect_2",
+  "summary": {
+    "total_modifications": 9,
+    "successful": 9,
+    "failed": 0
+  },
+  "modifications": [
+    {
+      "original_code": "# Original process_data from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified process_data - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def process_data():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "process_data",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 1,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original validate_input from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified validate_input - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def validate_input():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "validate_input",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 2,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original __init__ from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified __init__ - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def __init__():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "__init__",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 3,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original load from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified load - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def load():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "load",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 4,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original transform from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified transform - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def transform():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "transform",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 5,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original save from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified save - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def save():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "save",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 6,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original helper from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\utils.py",
+      "modified_code": "# Modified helper - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def helper():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\utils.py",
+      "target": "helper",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 7,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original format_output from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\utils.py",
+      "modified_code": "# Modified format_output - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def format_output():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\utils.py",
+      "target": "format_output",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 8,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "# Original DataHandler from C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "modified_code": "# Modified DataHandler - analyze_and_modify",
+      "diff": "--- a/src/file.py\n+++ b/src/file.py\n@@ -1,5 +1,6 @@\n def DataHandler():\n     # Existing code\n+    # analyze_and_modify\n     return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_93_ijdmcsg0\\src\\handler.py",
+      "target": "DataHandler",
+      "generated_by": "template",
+      "status": "success",
+      "execution_order": 9,
+      "syntax_valid": true
+    }
+  ],
+  "fc1_reference": {
+    "solution_overview": "根据用户需求「添加输入验证」，分析得到代码工程包含 2 个文件、8 个函数、1 个类。将进行针对性的代码修改。"
+  },
+  "created_at": "2026-05-02T00:43:58.636924"
+}

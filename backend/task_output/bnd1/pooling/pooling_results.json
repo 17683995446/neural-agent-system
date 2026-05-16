@@ -1,0 +1,11 @@
+{
+  "task_id": "bnd1",
+  "layer": "pooling",
+  "user_requirement": "test query",
+  "compressed_features": [],
+  "global_features": {
+    "error": "No results to aggregate"
+  },
+  "total_files_processed": 0,
+  "created_at": "2026-05-01T22:13:32.743642"
+}

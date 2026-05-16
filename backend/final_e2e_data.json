@@ -1,0 +1,152 @@
+{
+  "title": "全链路端到端验证报告 — 50轮迭代",
+  "timestamp": "2026-05-03T10:13:18.628023",
+  "config": {
+    "cheap_llm_mode": true,
+    "model": "MiniMax-M2.5",
+    "api_base": "https://aigw-gzgy2.cucloud.cn:8443",
+    "api_key_set": true,
+    "cpu_count": 12
+  },
+  "agent_llm": {
+    "results": {
+      "卷积-CheapLLM": {
+        "agent": "卷积-CheapLLM",
+        "connected": true,
+        "time_ms": 4969.977855682373,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "池化-CheapLLM": {
+        "agent": "池化-CheapLLM",
+        "connected": true,
+        "time_ms": 3001.54447555542,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "FC1-CheapLLM": {
+        "agent": "FC1-CheapLLM",
+        "connected": true,
+        "time_ms": 3873.4679222106934,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "FC2-CheapLLM": {
+        "agent": "FC2-CheapLLM",
+        "connected": true,
+        "time_ms": 4044.8555946350098,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "FC3-CheapLLM": {
+        "agent": "FC3-CheapLLM",
+        "connected": true,
+        "time_ms": 4203.542232513428,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "输出-CheapLLM": {
+        "agent": "输出-CheapLLM",
+        "connected": true,
+        "time_ms": 5546.597003936768,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "反向传播-CheapLLM": {
+        "agent": "反向传播-CheapLLM",
+        "connected": true,
+        "time_ms": 3341.146469116211,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "卷积-普通LLM": {
+        "agent": "卷积-普通LLM",
+        "connected": true,
+        "time_ms": 3603.7051677703857,
+        "model": "MiniMax-M2.5",
+        "error": null
+      },
+      "FC1-普通LLM": {
+        "agent": "FC1-普通LLM",
+        "connected": true,
+        "time_ms": 4615.849256515503,
+        "model": "MiniMax-M2.5",
+        "error": null
+      }
+    },
+    "connected": 9,
+    "total": 9
+  },
+  "component_tests": {
+    "circuit_breaker_opens": true,
+    "cache_hit": true,
+    "cheap_profile": true,
+    "agent_pool_enabled": true,
+    "pool_dispatch": true
+  },
+  "iteration": {
+    "iterations": 50,
+    "success": 50,
+    "fail": 0,
+    "success_rate": 1.0,
+    "total_llm": 250,
+    "total_llm_ok": 250,
+    "llm_success_rate": 1.0,
+    "time_stats": {
+      "mean_ms": 9573.1,
+      "median_ms": 8930.1,
+      "stdev_ms": 3277.5,
+      "min_ms": 4325.9,
+      "max_ms": 19652.6,
+      "p95_ms": 17820.2,
+      "total_s": 478.7
+    },
+    "agent_summary": {
+      "conv": {
+        "calls": 50,
+        "ok": 50,
+        "fail": 0,
+        "success_rate": 1.0,
+        "avg_ms": 5864.9,
+        "min_ms": 2754.3,
+        "max_ms": 13729.8
+      },
+      "fc1": {
+        "calls": 50,
+        "ok": 50,
+        "fail": 0,
+        "success_rate": 1.0,
+        "avg_ms": 5695.2,
+        "min_ms": 2759.6,
+        "max_ms": 17818.5
+      },
+      "fc2": {
+        "calls": 50,
+        "ok": 50,
+        "fail": 0,
+        "success_rate": 1.0,
+        "avg_ms": 5765.0,
+        "min_ms": 2920.1,
+        "max_ms": 19649.6
+      },
+      "fc3": {
+        "calls": 50,
+        "ok": 50,
+        "fail": 0,
+        "success_rate": 1.0,
+        "avg_ms": 5855.1,
+        "min_ms": 2766.8,
+        "max_ms": 18230.6
+      },
+      "output": {
+        "calls": 50,
+        "ok": 50,
+        "fail": 0,
+        "success_rate": 1.0,
+        "avg_ms": 5997.6,
+        "min_ms": 2791.7,
+        "max_ms": 14873.9
+      }
+    }
+  }
+}

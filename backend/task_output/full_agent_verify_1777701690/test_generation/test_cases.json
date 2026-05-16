@@ -1,0 +1,233 @@
+{
+  "task_id": "full_agent_verify_1777701690",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 28,
+    "unit_tests": 14,
+    "integration_tests": 14
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestValidationrule:\n    \"\"\"Test cases for ValidationRule\"\"\"\n\n    def test_ValidationRule_exists(self):\n        \"\"\"Test that ValidationRule exists\"\"\"\n        pass\n\n    def test_ValidationRule_execution(self):\n        \"\"\"Test ValidationRule execution\"\"\"\n        pass\n\n    def test_ValidationRule_edge_cases(self):\n        \"\"\"Test edge cases for ValidationRule\"\"\"\n        pass\n",
+      "target": "ValidationRule",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationValidationrule:\n    \"\"\"Integration tests for ValidationRule\"\"\"\n\n    def test_ValidationRule_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ValidationRule_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ValidationRule",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestConfigmissingerror:\n    \"\"\"Test cases for ConfigMissingError\"\"\"\n\n    def test_ConfigMissingError_exists(self):\n        \"\"\"Test that ConfigMissingError exists\"\"\"\n        pass\n\n    def test_ConfigMissingError_execution(self):\n        \"\"\"Test ConfigMissingError execution\"\"\"\n        pass\n\n    def test_ConfigMissingError_edge_cases(self):\n        \"\"\"Test edge cases for ConfigMissingError\"\"\"\n        pass\n",
+      "target": "ConfigMissingError",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationConfigmissingerror:\n    \"\"\"Integration tests for ConfigMissingError\"\"\"\n\n    def test_ConfigMissingError_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ConfigMissingError_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ConfigMissingError",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestConfigtypeerror:\n    \"\"\"Test cases for ConfigTypeError\"\"\"\n\n    def test_ConfigTypeError_exists(self):\n        \"\"\"Test that ConfigTypeError exists\"\"\"\n        pass\n\n    def test_ConfigTypeError_execution(self):\n        \"\"\"Test ConfigTypeError execution\"\"\"\n        pass\n\n    def test_ConfigTypeError_edge_cases(self):\n        \"\"\"Test edge cases for ConfigTypeError\"\"\"\n        pass\n",
+      "target": "ConfigTypeError",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationConfigtypeerror:\n    \"\"\"Integration tests for ConfigTypeError\"\"\"\n\n    def test_ConfigTypeError_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ConfigTypeError_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ConfigTypeError",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestConfigvalueerror:\n    \"\"\"Test cases for ConfigValueError\"\"\"\n\n    def test_ConfigValueError_exists(self):\n        \"\"\"Test that ConfigValueError exists\"\"\"\n        pass\n\n    def test_ConfigValueError_execution(self):\n        \"\"\"Test ConfigValueError execution\"\"\"\n        pass\n\n    def test_ConfigValueError_edge_cases(self):\n        \"\"\"Test edge cases for ConfigValueError\"\"\"\n        pass\n",
+      "target": "ConfigValueError",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationConfigvalueerror:\n    \"\"\"Integration tests for ConfigValueError\"\"\"\n\n    def test_ConfigValueError_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ConfigValueError_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ConfigValueError",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestConfigformaterror:\n    \"\"\"Test cases for ConfigFormatError\"\"\"\n\n    def test_ConfigFormatError_exists(self):\n        \"\"\"Test that ConfigFormatError exists\"\"\"\n        pass\n\n    def test_ConfigFormatError_execution(self):\n        \"\"\"Test ConfigFormatError execution\"\"\"\n        pass\n\n    def test_ConfigFormatError_edge_cases(self):\n        \"\"\"Test edge cases for ConfigFormatError\"\"\"\n        pass\n",
+      "target": "ConfigFormatError",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationConfigformaterror:\n    \"\"\"Integration tests for ConfigFormatError\"\"\"\n\n    def test_ConfigFormatError_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ConfigFormatError_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ConfigFormatError",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestConfigvalidator:\n    \"\"\"Test cases for ConfigValidator\"\"\"\n\n    def test_ConfigValidator_exists(self):\n        \"\"\"Test that ConfigValidator exists\"\"\"\n        pass\n\n    def test_ConfigValidator_execution(self):\n        \"\"\"Test ConfigValidator execution\"\"\"\n        pass\n\n    def test_ConfigValidator_edge_cases(self):\n        \"\"\"Test edge cases for ConfigValidator\"\"\"\n        pass\n",
+      "target": "ConfigValidator",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationConfigvalidator:\n    \"\"\"Integration tests for ConfigValidator\"\"\"\n\n    def test_ConfigValidator_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ConfigValidator_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ConfigValidator",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestSettings:\n    \"\"\"Test cases for Settings\"\"\"\n\n    def test_Settings_exists(self):\n        \"\"\"Test that Settings exists\"\"\"\n        pass\n\n    def test_Settings_execution(self):\n        \"\"\"Test Settings execution\"\"\"\n        pass\n\n    def test_Settings_edge_cases(self):\n        \"\"\"Test edge cases for Settings\"\"\"\n        pass\n",
+      "target": "Settings",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationSettings:\n    \"\"\"Integration tests for Settings\"\"\"\n\n    def test_Settings_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_Settings_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "Settings",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestGetSettings:\n    \"\"\"Test cases for get_settings\"\"\"\n\n    def test_get_settings_exists(self):\n        \"\"\"Test that get_settings exists\"\"\"\n        pass\n\n    def test_get_settings_execution(self):\n        \"\"\"Test get_settings execution\"\"\"\n        pass\n\n    def test_get_settings_edge_cases(self):\n        \"\"\"Test edge cases for get_settings\"\"\"\n        pass\n",
+      "target": "get_settings",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationGetSettings:\n    \"\"\"Integration tests for get_settings\"\"\"\n\n    def test_get_settings_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_get_settings_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "get_settings",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestValidationresult:\n    \"\"\"Test cases for ValidationResult\"\"\"\n\n    def test_ValidationResult_exists(self):\n        \"\"\"Test that ValidationResult exists\"\"\"\n        pass\n\n    def test_ValidationResult_execution(self):\n        \"\"\"Test ValidationResult execution\"\"\"\n        pass\n\n    def test_ValidationResult_edge_cases(self):\n        \"\"\"Test edge cases for ValidationResult\"\"\"\n        pass\n",
+      "target": "ValidationResult",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationValidationresult:\n    \"\"\"Integration tests for ValidationResult\"\"\"\n\n    def test_ValidationResult_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ValidationResult_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ValidationResult",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestConfigsourcevalidator:\n    \"\"\"Test cases for ConfigSourceValidator\"\"\"\n\n    def test_ConfigSourceValidator_exists(self):\n        \"\"\"Test that ConfigSourceValidator exists\"\"\"\n        pass\n\n    def test_ConfigSourceValidator_execution(self):\n        \"\"\"Test ConfigSourceValidator execution\"\"\"\n        pass\n\n    def test_ConfigSourceValidator_edge_cases(self):\n        \"\"\"Test edge cases for ConfigSourceValidator\"\"\"\n        pass\n",
+      "target": "ConfigSourceValidator",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationConfigsourcevalidator:\n    \"\"\"Integration tests for ConfigSourceValidator\"\"\"\n\n    def test_ConfigSourceValidator_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_ConfigSourceValidator_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "ConfigSourceValidator",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_config.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestFailurestrategy:\n    \"\"\"Test cases for FailureStrategy\"\"\"\n\n    def test_FailureStrategy_exists(self):\n        \"\"\"Test that FailureStrategy exists\"\"\"\n        pass\n\n    def test_FailureStrategy_execution(self):\n        \"\"\"Test FailureStrategy execution\"\"\"\n        pass\n\n    def test_FailureStrategy_edge_cases(self):\n        \"\"\"Test edge cases for FailureStrategy\"\"\"\n        pass\n",
+      "target": "FailureStrategy",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_config.py",
+      "test_code": "import pytest\n\nclass TestIntegrationFailurestrategy:\n    \"\"\"Integration tests for FailureStrategy\"\"\"\n\n    def test_FailureStrategy_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_FailureStrategy_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "FailureStrategy",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_rl_trainer.py",
+      "test_code": "import pytest\nimport sys\nfrom unittest.mock import patch, MagicMock\nfrom app.core.rl_trainer import RLTrainer\n\n\nclass TestRLTrainerStart:\n    \"\"\"测试 RLTrainer 类的 start 方法\"\"\"\n\n    # ===== 正常用例 =====\n\n    def test_start_with_default_config(self):\n        \"\"\"测试使用默认配置启动训练器\"\"\"\n        trainer = RLTrainer()\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_with_valid_custom_config(self):\n        \"\"\"测试使用合法的自定义配置启动训练器\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.01,\n            gamma=0.95,\n            epsilon=0.5,\n            epsilon_decay=0.99,\n            epsilon_min=0.05\n        )\n        trainer.start()\n        assert trainer.is_running is True\n\n    # ===== 边界用例 =====\n\n    def test_start_learning_rate_at_upper_bound(self):\n        \"\"\"测试学习率在上边界(1.0)时启动\"\"\"\n        trainer = RLTrainer(learning_rate=1.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_learning_rate_near_lower_bound(self):\n        \"\"\"测试学习率在下边界附近(0.001)时启动\"\"\"\n        trainer = RLTrainer(learning_rate=0.001)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_gamma_at_zero(self):\n        \"\"\"测试折扣因子gamma为0时启动\"\"\"\n        trainer = RLTrainer(gamma=0.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_gamma_at_one(self):\n        \"\"\"测试折扣因子gamma为1时启动\"\"\"\n        trainer = RLTrainer(gamma=1.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_epsilon_at_zero(self):\n        \"\"\"测试探索率epsilon为0时启动\"\"\"\n        trainer = RLTrainer(epsilon=0.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_epsilon_at_one(self):\n        \"\"\"测试探索率epsilon为1时启动\"\"\"\n        trainer = RLTrainer(epsilon=1.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_epsilon_decay_at_upper_bound(self):\n        \"\"\"测试探索率衰减率在上边界(1.0)时启动\"\"\"\n        trainer = RLTrainer(epsilon_decay=1.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_epsilon_min_at_zero(self):\n        \"\"\"测试最小探索率为0时启动\"\"\"\n        trainer = RLTrainer(epsilon_min=0.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    def test_start_epsilon_min_at_one(self):\n        \"\"\"测试最小探索率为1时启动\"\"\"\n        trainer = RLTrainer(epsilon_min=1.0)\n        trainer.start()\n        assert trainer.is_running is True\n\n    # ===== 异常用例 =====\n\n    def test_start_learning_rate_zero(self, monkeypatch):\n        \"\"\"测试学习率为0时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(learning_rate=0.0)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n        assert trainer.is_running is False\n\n    def test_start_learning_rate_negative(self, monkeypatch):\n        \"\"\"测试学习率为负数时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(learning_rate=-0.1)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_learning_rate_greater_than_one(self, monkeypatch):\n        \"\"\"测试学习率大于1时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(learning_rate=1.5)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_gamma_negative(self, monkeypatch):\n        \"\"\"测试gamma为负数时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(gamma=-0.1)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_gamma_greater_than_one(self, monkeypatch):\n        \"\"\"测试gamma大于1时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(gamma=1.5)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_negative(self, monkeypatch):\n        \"\"\"测试epsilon为负数时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon=-0.1)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_greater_than_one(self, monkeypatch):\n        \"\"\"测试epsilon大于1时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon=1.5)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_decay_zero(self, monkeypatch):\n        \"\"\"测试epsilon_decay为0时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon_decay=0.0)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_decay_negative(self, monkeypatch):\n        \"\"\"测试epsilon_decay为负数时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon_decay=-0.1)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_decay_greater_than_one(self, monkeypatch):\n        \"\"\"测试epsilon_decay大于1时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon_decay=1.5)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_min_negative(self, monkeypatch):\n        \"\"\"测试epsilon_min为负数时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon_min=-0.1)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_epsilon_min_greater_than_one(self, monkeypatch):\n        \"\"\"测试epsilon_min大于1时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(epsilon_min=1.5)\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True\n\n    def test_start_multiple_invalid_params(self, monkeypatch):\n        \"\"\"测试多个参数同时无效时启动失败\"\"\"\n        exit_called = False\n        def mock_exit(code):\n            nonlocal exit_called\n            exit_called = True\n            raise SystemExit(code)\n        \n        monkeypatch.setattr(sys, 'exit', mock_exit)\n        trainer = RLTrainer(\n            learning_rate=2.0,\n            gamma=-0.5,\n            epsilon=1.5\n        )\n        \n        with pytest.raises(SystemExit):\n            trainer.start()\n        \n        assert exit_called is True",
+      "target": "start",
+      "test_type": "unit",
+      "generated_by": "llm",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_rl_trainer.py",
+      "test_code": "import pytest\n\nclass TestIntegrationStart:\n    \"\"\"Integration tests for start\"\"\"\n\n    def test_start_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_start_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "start",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_rl_trainer.py",
+      "test_code": "import pytest\nimport sys\nfrom unittest.mock import patch, MagicMock\nimport logging\n\n# 假设文件路径为 app/core/rl_trainer.py\n# 由于实际导入可能不同，这里假设类名为 RLTrainer\nimport sys\nimport os\n\n# 添加项目根目录到 Python 路径\nsys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))\n\ntry:\n    from app.core.rl_trainer import RLTrainer\nexcept ImportError:\n    # 如果导入失败，尝试直接导入\n    from rl_trainer import RLTrainer\n\n\nclass TestRLTrainerInit:\n    \"\"\"测试 RLTrainer 类的初始化方法\"\"\"\n\n    def test_init_with_default_params(self):\n        \"\"\"正常用例：使用默认参数初始化\"\"\"\n        trainer = RLTrainer()\n        assert trainer.learning_rate == 0.001\n        assert trainer.gamma == 0.99\n        assert trainer.epsilon == 1.0\n        assert trainer.epsilon_decay == 0.995\n        assert trainer.epsilon_min == 0.01\n        assert trainer.is_running is False\n\n    def test_init_with_custom_params(self):\n        \"\"\"正常用例：使用自定义参数初始化\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.002,\n            gamma=0.95,\n            epsilon=0.5,\n            epsilon_decay=0.99,\n            epsilon_min=0.05\n        )\n        assert trainer.learning_rate == 0.002\n        assert trainer.gamma == 0.95\n        assert trainer.epsilon == 0.5\n        assert trainer.epsilon_decay == 0.99\n        assert trainer.epsilon_min == 0.05\n        assert trainer.is_running is False\n\n\nclass TestRLTrainerValidateConfig:\n    \"\"\"测试配置验证方法\"\"\"\n\n    def test_validate_config_valid_params(self):\n        \"\"\"正常用例：所有参数都在有效范围内\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.001,\n            gamma=0.99,\n            epsilon=1.0,\n            epsilon_decay=0.995,\n            epsilon_min=0.01\n        )\n        # 不应该抛出异常\n        trainer.validate_config()\n\n    def test_validate_config_boundary_learning_rate_min(self):\n        \"\"\"边界用例：learning_rate 最小边界值（接近0）\"\"\"\n        trainer = RLTrainer(learning_rate=0.0001)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_learning_rate_max(self):\n        \"\"\"边界用例：learning_rate 最大边界值（1.0）\"\"\"\n        trainer = RLTrainer(learning_rate=1.0)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_gamma_min(self):\n        \"\"\"边界用例：gamma 最小边界值（0）\"\"\"\n        trainer = RLTrainer(gamma=0)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_gamma_max(self):\n        \"\"\"边界用例：gamma 最大边界值（1）\"\"\"\n        trainer = RLTrainer(gamma=1)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_epsilon_min(self):\n        \"\"\"边界用例：epsilon 最小边界值（0）\"\"\"\n        trainer = RLTrainer(epsilon=0)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_epsilon_max(self):\n        \"\"\"边界用例：epsilon 最大边界值（1）\"\"\"\n        trainer = RLTrainer(epsilon=1)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_epsilon_decay_min(self):\n        \"\"\"边界用例：epsilon_decay 最小边界值（接近0）\"\"\"\n        trainer = RLTrainer(epsilon_decay=0.0001)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_epsilon_decay_max(self):\n        \"\"\"边界用例：epsilon_decay 最大边界值（1）\"\"\"\n        trainer = RLTrainer(epsilon_decay=1)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_epsilon_min_value(self):\n        \"\"\"边界用例：epsilon_min 最小边界值（0）\"\"\"\n        trainer = RLTrainer(epsilon_min=0)\n        trainer.validate_config()\n\n    def test_validate_config_boundary_epsilon_min_max(self):\n        \"\"\"边界用例：epsilon_min 最大边界值（1）\"\"\"\n        trainer = RLTrainer(epsilon_min=1)\n        trainer.validate_config()\n\n    def test_validate_config_invalid_learning_rate_zero(self):\n        \"\"\"异常用例：learning_rate 为 0\"\"\"\n        trainer = RLTrainer(learning_rate=0)\n        with pytest.raises(ValueError, match=\"学习率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_learning_rate_negative(self):\n        \"\"\"异常用例：learning_rate 为负数\"\"\"\n        trainer = RLTrainer(learning_rate=-0.001)\n        with pytest.raises(ValueError, match=\"学习率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_learning_rate_exceed(self):\n        \"\"\"异常用例：learning_rate 超过 1\"\"\"\n        trainer = RLTrainer(learning_rate=1.5)\n        with pytest.raises(ValueError, match=\"学习率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_gamma_negative(self):\n        \"\"\"异常用例：gamma 为负数\"\"\"\n        trainer = RLTrainer(gamma=-0.1)\n        with pytest.raises(ValueError, match=\"折扣因子gamma必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_gamma_exceed(self):\n        \"\"\"异常用例：gamma 超过 1\"\"\"\n        trainer = RLTrainer(gamma=1.5)\n        with pytest.raises(ValueError, match=\"折扣因子gamma必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_negative(self):\n        \"\"\"异常用例：epsilon 为负数\"\"\"\n        trainer = RLTrainer(epsilon=-0.1)\n        with pytest.raises(ValueError, match=\"探索率epsilon必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_exceed(self):\n        \"\"\"异常用例：epsilon 超过 1\"\"\"\n        trainer = RLTrainer(epsilon=1.5)\n        with pytest.raises(ValueError, match=\"探索率epsilon必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_decay_zero(self):\n        \"\"\"异常用例：epsilon_decay 为 0\"\"\"\n        trainer = RLTrainer(epsilon_decay=0)\n        with pytest.raises(ValueError, match=\"探索率衰减率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_decay_negative(self):\n        \"\"\"异常用例：epsilon_decay 为负数\"\"\"\n        trainer = RLTrainer(epsilon_decay=-0.1)\n        with pytest.raises(ValueError, match=\"探索率衰减率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_decay_exceed(self):\n        \"\"\"异常用例：epsilon_decay 超过 1\"\"\"\n        trainer = RLTrainer(epsilon_decay=1.5)\n        with pytest.raises(ValueError, match=\"探索率衰减率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_min_negative(self):\n        \"\"\"异常用例：epsilon_min 为负数\"\"\"\n        trainer = RLTrainer(epsilon_min=-0.1)\n        with pytest.raises(ValueError, match=\"最小探索率必须在\"):\n            trainer.validate_config()\n\n    def test_validate_config_invalid_epsilon_min_exceed(self):\n        \"\"\"异常用例：epsilon_min 超过 1\"\"\"\n        trainer = RLTrainer(epsilon_min=1.5)\n        with pytest.raises(ValueError, match=\"最小探索率必须在\"):\n            trainer.validate_config()\n\n\nclass TestRLTrainerStart:\n    \"\"\"测试训练器启动方法\"\"\"\n\n    def test_start_with_valid_config(self, caplog):\n        \"\"\"正常用例：使用有效配置启动训练器\"\"\"\n        trainer = RLTrainer()\n        with caplog.at_level(logging.INFO):\n            trainer.start()\n        assert trainer.is_running is True\n        assert \"训练器已启动\" in caplog.text\n\n    def test_start_with_invalid_config(self, caplog):\n        \"\"\"异常用例：使用无效配置启动训练器（应退出程序）\"\"\"\n        trainer = RLTrainer(learning_rate=0)\n        \n        # 使用 monkeypatch 模拟 sys.exit 避免测试退出\n        with pytest.raises(SystemExit) as exc_info:\n            trainer.start()\n        \n        assert exc_info.value.code == 1\n        assert trainer.is_running is False\n\n\nclass TestRLTrainerStop:\n    \"\"\"测试训练器停止方法\"\"\"\n\n    def test_stop_trainer(self, caplog):\n        \"\"\"正常用例：停止训练器\"\"\"\n        trainer = RLTrainer()\n        trainer.start()  # 先启动\n        \n        with caplog.at_level(logging.INFO):\n            trainer.stop()\n        \n        assert trainer.is_running is False\n        assert \"训练器已停止\" in caplog.text\n\n    def test_stop_already_stopped_trainer(self, caplog):\n        \"\"\"边界用例：停止已停止的训练器\"\"\"\n        trainer = RLTrainer()\n        # 不启动，直接停止\n        \n        with caplog.at_level(logging.INFO):\n            trainer.stop()\n        \n        assert trainer.is_running is False\n\n\nclass TestRLTrainerTrain:\n    \"\"\"测试训练方法\"\"\"\n\n    def test_train_basic(self, caplog):\n        \"\"\"正常用例：执行训练逻辑\"\"\"\n        trainer = RLTrainer()\n        trainer.start()  # 需要先启动\n        \n        with caplog.at_level(logging.INFO):\n            trainer.train()\n        \n        assert \"开始训练\" in caplog.text\n\n    def test_train_without_start(self, caplog):\n        \"\"\"边界用例：未启动直接训练\"\"\"\n        trainer = RLTrainer()\n        \n        with caplog.at_level(logging.INFO):\n            trainer.train()\n        \n        # 即使未启动也应该能执行训练（根据代码逻辑）\n        assert \"开始训练\" in caplog.text\n\n\nclass TestRLTrainerIntegration:\n    \"\"\"集成测试：完整的训练流程\"\"\"\n\n    def test_full_training_cycle(self, caplog):\n        \"\"\"正常用例：完整的训练周期（启动->训练->停止）\"\"\"\n        trainer = RLTrainer()\n        \n        with caplog.at_level(logging.INFO):\n            # 启动\n            trainer.start()\n            assert trainer.is_running is True\n            \n            # 训练\n            trainer.train()\n            \n            # 停止\n            trainer.stop()\n            assert trainer.is_running is False\n\n    def test_multiple_start_stop_cycles(self, caplog):\n        \"\"\"边界用例：多次启动停止循环\"\"\"\n        trainer = RLTrainer()\n        \n        for i in range(3):\n            trainer.start()\n            assert trainer.is_running is True\n            \n            trainer.stop()\n            assert trainer.is_running is False\n\n\nclass TestRLTrainerEdgeCases:\n    \"\"\"边界和极端情况测试\"\"\"\n\n    def test_extreme_learning_rate_values(self):\n        \"\"\"边界用例：极端的学习率值\"\"\"\n        # 非常小的学习率\n        trainer = RLTrainer(learning_rate=1e-10)\n        trainer.validate_config()\n        \n        # 边界值 1.0\n        trainer = RLTrainer(learning_rate=1.0)\n        trainer.validate_config()\n\n    def test_extreme_gamma_values(self):\n        \"\"\"边界用例：极端的 gamma 值\"\"\"\n        # gamma = 0（完全不考虑未来奖励）\n        trainer = RLTrainer(gamma=0)\n        trainer.validate_config()\n        \n        # gamma = 1（完全考虑未来奖励）\n        trainer = RLTrainer(gamma=1)\n        trainer.validate_config()\n\n    def test_epsilon_decay_near_zero(self):\n        \"\"\"边界用例：epsilon_decay 接近 0\"\"\"\n        trainer = RLTrainer(epsilon_decay=1e-10)\n        trainer.validate_config()\n\n    def test_all_min_values(self):\n        \"\"\"边界用例：所有参数都取最小值\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.0001,\n            gamma=0,\n            epsilon=0,\n            epsilon_decay=0.0001,\n            epsilon_min=0\n        )\n        trainer.validate_config()\n\n    def test_all_max_values(self):\n        \"\"\"边界用例：所有参数都取最大值\"\"\"\n        trainer = RLTrainer(\n            learning_rate=1.0,\n            gamma=1,\n            epsilon=1,\n            epsilon_decay=1,\n            epsilon_min=1\n        )\n        trainer.validate_config()\n\n\nif __name__ == \"__main__\":\n    pytest.main([__file__, \"-v\"])",
+      "target": "main",
+      "test_type": "unit",
+      "generated_by": "llm",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_rl_trainer.py",
+      "test_code": "import pytest\n\nclass TestIntegrationMain:\n    \"\"\"Integration tests for main\"\"\"\n\n    def test_main_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_main_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "main",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_rl_trainer.py",
+      "test_code": "import pytest\nfrom unittest.mock import Mock, patch\nimport sys\nimport os\n\n# 添加项目根目录到 sys.path\nsys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))\n\nfrom app.core.rl_trainer import RLTrainer\n\n\nclass TestValidateConfig:\n    \"\"\"测试 RLTrainer 的 validate_config 方法\"\"\"\n    \n    def test_validate_config_success(self):\n        \"\"\"测试正常用例：配置参数有效\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.001,\n            gamma=0.99,\n            epsilon=1.0,\n            epsilon_decay=0.995,\n            epsilon_min=0.01\n        )\n        \n        # 模拟 ConfigValidator 返回有效的 ValidationResult\n        mock_result = Mock()\n        mock_result.is_valid = True\n        mock_result.errors = []\n        \n        with patch('app.core.rl_trainer.ConfigValidator') as MockConfigValidator:\n            mock_validator = MockConfigValidator.return_value\n            mock_validator.validate.return_value = mock_result\n            \n            result = trainer.validate_config()\n            \n            assert result.is_valid == True\n            assert len(result.errors) == 0\n            mock_validator.validate.assert_called_once()\n    \n    def test_validate_config_boundary_learning_rate_zero(self):\n        \"\"\"测试边界用例：learning_rate 为 0\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0,\n            gamma=0.99,\n            epsilon=1.0,\n            epsilon_decay=0.995,\n            epsilon_min=0.01\n        )\n        \n        mock_result = Mock()\n        mock_result.is_valid = True\n        mock_result.errors = []\n        \n        with patch('app.core.rl_trainer.ConfigValidator') as MockConfigValidator:\n            mock_validator = MockConfigValidator.return_value\n            mock_validator.validate.return_value = mock_result\n            \n            result = trainer.validate_config()\n            \n            assert result.is_valid == True\n    \n    def test_validate_config_boundary_learning_rate_one(self):\n        \"\"\"测试边界用例：learning_rate 为 1\"\"\"\n        trainer = RLTrainer(\n            learning_rate=1,\n            gamma=0.99,\n            epsilon=1.0,\n            epsilon_decay=0.995,\n            epsilon_min=0.01\n        )\n        \n        mock_result = Mock()\n        mock_result.is_valid = True\n        mock_result.errors = []\n        \n        with patch('app.core.rl_trainer.ConfigValidator') as MockConfigValidator:\n            mock_validator = MockConfigValidator.return_value\n            mock_validator.validate.return_value = mock_result\n            \n            result = trainer.validate_config()\n            \n            assert result.is_valid == True\n    \n    def test_validate_config_boundary_gamma_zero(self):\n        \"\"\"测试边界用例：gamma 为 0\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.001,\n            gamma=0,\n            epsilon=1.0,\n            epsilon_decay=0.995,\n            epsilon_min=0.01\n        )\n        \n        mock_result = Mock()\n        mock_result.is_valid = True\n        mock_result.errors = []\n        \n        with patch('app.core.rl_trainer.ConfigValidator') as MockConfigValidator:\n            mock_validator = MockConfigValidator.return_value\n            mock_validator.validate.return_value = mock_result\n            \n            result = trainer.validate_config()\n            \n            assert result.is_valid == True\n    \n    def test_validate_config_boundary_gamma_one(self):\n        \"\"\"测试边界用例：gamma 为 1\"\"\"\n        trainer = RLTrainer(\n            learning_rate=0.001,\n            gamma=1,\n            epsilon=1.0,\n            epsilon_decay=0.995,\n            epsilon_min=0.01\n        )\n        \n        mock_result = Mock()\n        mock_result.is_valid = True\n        mock_result.errors = []\n        \n        with patch('app.core.rl_trainer.ConfigValidator') as MockConfigValidator:\n            mock_validator = MockConfigValidator.return_value",
+      "target": "validate_config",
+      "test_type": "unit",
+      "generated_by": "llm",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_rl_trainer.py",
+      "test_code": "import pytest\n\nclass TestIntegrationValidateConfig:\n    \"\"\"Integration tests for validate_config\"\"\"\n\n    def test_validate_config_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_validate_config_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "validate_config",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 3930,
+    "covered_lines": 2747,
+    "coverage_percent": 69.9,
+    "files_with_coverage": 14
+  },
+  "fc2_reference": {
+    "total_modifications": 15,
+    "successful": 14
+  },
+  "created_at": "2026-05-02T14:08:40.110658"
+}

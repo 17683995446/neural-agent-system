@@ -1,0 +1,56 @@
+{
+  "task_id": "dp2",
+  "layer": "pooling",
+  "user_requirement": "add feature",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "process",
+          "line": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "App",
+          "line": 6
+        }
+      ],
+      "imports": [
+        "import os"
+      ],
+      "summary": "定义了一个process函数用于处理数据，以及一个App类，其run方法用于执行应用逻辑",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmpwph5kqp2\\app.py",
+      "task_id": "dp2",
+      "analyzed_at": "2026-05-03T08:25:56.009922",
+      "total_lines": 9,
+      "analyzed_by": "llm",
+      "llm_summary": "在app.py文件中，App类和process函数是核心组件。若要添加新功能，建议在App类中添加新的方法，或在process函数中扩展功能逻辑。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 1,
+    "total_functions": 1,
+    "total_classes": 1,
+    "unique_imports": [
+      "import os"
+    ],
+    "top_functions": [
+      {
+        "name": "process",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmpwph5kqp2\\app.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "App",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmpwph5kqp2\\app.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 1,
+  "created_at": "2026-05-03T08:26:02.555963"
+}

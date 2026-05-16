@@ -1,0 +1,228 @@
+{
+  "task_id": "full_verify_1777698536",
+  "layer": "pooling",
+  "user_requirement": "Add comprehensive error handling and logging to all functions in the codebase, including try/except blocks, input validation, and structured error responses",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "on_worker_ready",
+          "line": 28
+        },
+        {
+          "name": "on_worker_shutdown",
+          "line": 32
+        },
+        {
+          "name": "dispatch_agent_task",
+          "line": 36
+        },
+        {
+          "name": "process_pipeline",
+          "line": 63
+        },
+        {
+          "name": "_handle_convolution",
+          "line": 90
+        },
+        {
+          "name": "_handle_pooling",
+          "line": 96
+        },
+        {
+          "name": "_handle_fullconnect",
+          "line": 102
+        },
+        {
+          "name": "_handle_output",
+          "line": 119
+        },
+        {
+          "name": "_handle_backward",
+          "line": 125
+        }
+      ],
+      "classes": [
+        {
+          "name": "Celery",
+          "line": 9
+        }
+      ],
+      "imports": [
+        "from celery import Celery",
+        "from celery.signals import worker_ready, worker_shutdown",
+        "from app.core.config import settings",
+        "from app.core.logging import logger"
+      ],
+      "summary": "Celery Worker异步任务调度服务，用于处理神经网络各层(卷积、池化、全连接、输出、反向传播)的Agent任务分发和完整管道处理。",
+      "file_path": "app\\core\\worker.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:46.417315",
+      "total_lines": 159,
+      "analyzed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 8,
+    "total_functions": 23,
+    "total_classes": 5,
+    "unique_imports": [
+      "from typing import Optional, List, Dict, Any",
+      "from pathlib import Path",
+      "import time",
+      "import asyncio",
+      "from celery import Celery",
+      "from app.models.schemas import TaskStatus",
+      "from typing import Any, Optional, Type",
+      "import sys",
+      "from pydantic import BaseModel, ValidationError",
+      "from app.models.database import SessionLocal, TaskModel",
+      "from logging.handlers import RotatingFileHandler",
+      "from app.core.config import settings",
+      "import requests",
+      "import threading",
+      "from functools import lru_cache",
+      "from app.agents.trust.backward import BackwardPropagation",
+      "import random",
+      "from app.core.logging import logger",
+      "from celery.signals import worker_ready, worker_shutdown",
+      "from typing import Optional",
+      "import logging",
+      "from pydantic_settings import BaseSettings, SettingsConfigDict",
+      "import ray (conditional)",
+      "import json",
+      "import re"
+    ],
+    "top_functions": [
+      {
+        "name": "__init__",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "connect_ray",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "get_pending_tasks",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "train_on_task",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "_get_layer_agents",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "run_training_loop",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "stop",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "main",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "get_settings",
+        "file": "app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "extract_json_from_llm_response",
+        "file": "app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "extract_code_from_llm_response",
+        "file": "app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "truncate_code",
+        "file": "app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "main",
+        "file": "app\\core\\app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "exponential_backoff",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "on_worker_ready",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "on_worker_shutdown",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "dispatch_agent_task",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "process_pipeline",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_convolution",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_pooling",
+        "file": "app\\core\\worker.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "RLTrainer",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "Settings",
+        "file": "app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "RLTrainer",
+        "file": "app\\core\\app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "LLMClient",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "Celery",
+        "file": "app\\core\\worker.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 1,
+  "created_at": "2026-05-02T13:09:46.421478"
+}

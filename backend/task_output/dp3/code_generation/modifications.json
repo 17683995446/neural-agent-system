@@ -1,0 +1,38 @@
+{
+  "task_id": "dp3",
+  "layer": "code_generation",
+  "layer_name": "full_connect_2",
+  "summary": {
+    "total_modifications": 2,
+    "successful": 2,
+    "failed": 0
+  },
+  "modifications": [
+    {
+      "original_code": "import os\n\ndef process(data):\n    return data\n\nclass App:\n    def run(self):\n        pass\n",
+      "modified_code": "import os\n\ndef process(data):\n    return data\n\nclass App:\n    def __init__(self):\n        self.features = {}\n    \n    def add_feature(self, name, func):\n        self.features[name] = func\n    \n    def run_feature(self, name, *args, **kwargs):\n        if name in self.features:\n            return self.features[name](*args, **kwargs)\n        return None\n    \n    def run(self):\n        pass",
+      "diff": "--- original\n+++ modified\n import os\n \n def process(data):\n     return data\n \n class App:\n+    def __init__(self):\n+        self.features = {}\n+    \n+    def add_feature(self, name, func):\n+        self.features[name] = func\n+    \n+    def run_feature(self, name, *args, **kwargs):\n+        if name in self.features:\n+            return self.features[name](*args, **kwargs)\n+        return None\n+    \n+    def run(self):\n+        pass",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp6rddrqru\\app.py",
+      "target": "App",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 1,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "import os\n\ndef process(data):\n    return data\n\nclass App:\n    def run(self):\n        pass\n",
+      "modified_code": "import os\n\ndef process(data, feature=None):\n    if feature is None:\n        return data\n    \n    feature_handlers = {\n        'transform': lambda d: d.upper() if isinstance(d, str) else d * 2,\n        'filter': lambda d: [x for x in d if x > 0] if isinstance(d, list) else d,\n        'aggregate': lambda d: sum(d) if isinstance(d, list) else d,\n    }\n    \n    handler = feature_handlers.get(feature)\n    if handler:\n        return handler(data)\n    return data\n\ndef process_feature(data, feature):\n    \"\"\"独立的feature处理函数\"\"\"\n    if feature == 'custom':\n        return f\"Processed {data} with custom feature\"\n    return process(data, feature)\n\nclass App:\n    def run(self):\n        pass",
+      "diff": "--- original\n+++ modified\n import os\n \n+def process(data, feature=None):\n+    if feature is None:\n+        return data\n+    \n+    feature_handlers = {\n+        'transform': lambda d: d.upper() if isinstance(d, str) else d * 2,\n+        'filter': lambda d: [x for x in d if x > 0] if isinstance(d, list) else d,\n+        'aggregate': lambda d: sum(d) if isinstance(d, list) else d,\n+    }\n+    \n+    handler = feature_handlers.get(feature)\n+    if handler:\n+        return handler(data)\n+    return data\n+\n+def process_feature(data, feature):\n+    \"\"\"独立的feature处理函数\"\"\"\n+    if feature == 'custom':\n+        return f\"Processed {data} with custom feature\"\n+    return process(data, feature)\n+\n+class App:\n+    def run(self):\n+        pass",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp6rddrqru\\app.py",
+      "target": "process",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 2,
+      "syntax_valid": true
+    }
+  ],
+  "fc1_reference": {
+    "solution_overview": "为应用添加新功能的方案，计划在App类中增加功能相关的方法和属性，并对process函数进行相应扩展以支持新功能的调用"
+  },
+  "created_at": "2026-05-02T01:13:36.382051"
+}

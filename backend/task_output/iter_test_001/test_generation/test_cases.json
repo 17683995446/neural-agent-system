@@ -1,0 +1,79 @@
+{
+  "task_id": "iter_test_001",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 8,
+    "unit_tests": 4,
+    "integration_tests": 4
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_main.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestProcessData:\n    \"\"\"Test cases for process_data\"\"\"\n\n    def test_process_data_exists(self):\n        \"\"\"Test that process_data exists\"\"\"\n        pass\n\n    def test_process_data_execution(self):\n        \"\"\"Test process_data execution\"\"\"\n        pass\n\n    def test_process_data_edge_cases(self):\n        \"\"\"Test edge cases for process_data\"\"\"\n        pass\n",
+      "target": "process_data",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_main.py",
+      "test_code": "import pytest\n\nclass TestIntegrationProcessData:\n    \"\"\"Integration tests for process_data\"\"\"\n\n    def test_process_data_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_process_data_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "process_data",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_main.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestValidateInput:\n    \"\"\"Test cases for validate_input\"\"\"\n\n    def test_validate_input_exists(self):\n        \"\"\"Test that validate_input exists\"\"\"\n        pass\n\n    def test_validate_input_execution(self):\n        \"\"\"Test validate_input execution\"\"\"\n        pass\n\n    def test_validate_input_edge_cases(self):\n        \"\"\"Test edge cases for validate_input\"\"\"\n        pass\n",
+      "target": "validate_input",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_main.py",
+      "test_code": "import pytest\n\nclass TestIntegrationValidateInput:\n    \"\"\"Integration tests for validate_input\"\"\"\n\n    def test_validate_input_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_validate_input_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "validate_input",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_models.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestInit:\n    \"\"\"Test cases for __init__\"\"\"\n\n    def test___init___exists(self):\n        \"\"\"Test that __init__ exists\"\"\"\n        pass\n\n    def test___init___execution(self):\n        \"\"\"Test __init__ execution\"\"\"\n        pass\n\n    def test___init___edge_cases(self):\n        \"\"\"Test edge cases for __init__\"\"\"\n        pass\n",
+      "target": "__init__",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_models.py",
+      "test_code": "import pytest\n\nclass TestIntegrationInit:\n    \"\"\"Integration tests for __init__\"\"\"\n\n    def test___init___workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test___init___with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "__init__",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_models.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestDatamodel:\n    \"\"\"Test cases for DataModel\"\"\"\n\n    def test_DataModel_exists(self):\n        \"\"\"Test that DataModel exists\"\"\"\n        pass\n\n    def test_DataModel_execution(self):\n        \"\"\"Test DataModel execution\"\"\"\n        pass\n\n    def test_DataModel_edge_cases(self):\n        \"\"\"Test edge cases for DataModel\"\"\"\n        pass\n",
+      "target": "DataModel",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_models.py",
+      "test_code": "import pytest\n\nclass TestIntegrationDatamodel:\n    \"\"\"Integration tests for DataModel\"\"\"\n\n    def test_DataModel_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_DataModel_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "DataModel",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 4,
+    "covered_lines": 0,
+    "coverage_percent": 0.0,
+    "files_with_coverage": 4
+  },
+  "fc2_reference": {
+    "total_modifications": 4,
+    "successful": 4
+  },
+  "created_at": "2026-05-01T21:44:23.709071"
+}

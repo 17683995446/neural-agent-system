@@ -1,0 +1,98 @@
+{
+  "task_id": "stress_021",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 10,
+    "unit_tests": 5,
+    "integration_tests": 5
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_utils.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestFormatOutput:\n    \"\"\"Test cases for format_output\"\"\"\n\n    def test_format_output_exists(self):\n        \"\"\"Test that format_output exists\"\"\"\n        pass\n\n    def test_format_output_execution(self):\n        \"\"\"Test format_output execution\"\"\"\n        pass\n\n    def test_format_output_edge_cases(self):\n        \"\"\"Test edge cases for format_output\"\"\"\n        pass\n",
+      "target": "format_output",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_utils.py",
+      "test_code": "import pytest\n\nclass TestIntegrationFormatOutput:\n    \"\"\"Integration tests for format_output\"\"\"\n\n    def test_format_output_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_format_output_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "format_output",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_handler.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestProcessData:\n    \"\"\"Test cases for process_data\"\"\"\n\n    def test_process_data_exists(self):\n        \"\"\"Test that process_data exists\"\"\"\n        pass\n\n    def test_process_data_execution(self):\n        \"\"\"Test process_data execution\"\"\"\n        pass\n\n    def test_process_data_edge_cases(self):\n        \"\"\"Test edge cases for process_data\"\"\"\n        pass\n",
+      "target": "process_data",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_handler.py",
+      "test_code": "import pytest\n\nclass TestIntegrationProcessData:\n    \"\"\"Integration tests for process_data\"\"\"\n\n    def test_process_data_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_process_data_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "process_data",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_handler.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestValidateInput:\n    \"\"\"Test cases for validate_input\"\"\"\n\n    def test_validate_input_exists(self):\n        \"\"\"Test that validate_input exists\"\"\"\n        pass\n\n    def test_validate_input_execution(self):\n        \"\"\"Test validate_input execution\"\"\"\n        pass\n\n    def test_validate_input_edge_cases(self):\n        \"\"\"Test edge cases for validate_input\"\"\"\n        pass\n",
+      "target": "validate_input",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_handler.py",
+      "test_code": "import pytest\n\nclass TestIntegrationValidateInput:\n    \"\"\"Integration tests for validate_input\"\"\"\n\n    def test_validate_input_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_validate_input_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "validate_input",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_utils.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestHelper:\n    \"\"\"Test cases for helper\"\"\"\n\n    def test_helper_exists(self):\n        \"\"\"Test that helper exists\"\"\"\n        pass\n\n    def test_helper_execution(self):\n        \"\"\"Test helper execution\"\"\"\n        pass\n\n    def test_helper_edge_cases(self):\n        \"\"\"Test edge cases for helper\"\"\"\n        pass\n",
+      "target": "helper",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_utils.py",
+      "test_code": "import pytest\n\nclass TestIntegrationHelper:\n    \"\"\"Integration tests for helper\"\"\"\n\n    def test_helper_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_helper_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "helper",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_handler.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestDatahandler:\n    \"\"\"Test cases for DataHandler\"\"\"\n\n    def test_DataHandler_exists(self):\n        \"\"\"Test that DataHandler exists\"\"\"\n        pass\n\n    def test_DataHandler_execution(self):\n        \"\"\"Test DataHandler execution\"\"\"\n        pass\n\n    def test_DataHandler_edge_cases(self):\n        \"\"\"Test edge cases for DataHandler\"\"\"\n        pass\n",
+      "target": "DataHandler",
+      "test_type": "unit",
+      "generated_by": "template",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_handler.py",
+      "test_code": "import pytest\n\nclass TestIntegrationDatahandler:\n    \"\"\"Integration tests for DataHandler\"\"\"\n\n    def test_DataHandler_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_DataHandler_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "DataHandler",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 294,
+    "covered_lines": 204,
+    "coverage_percent": 69.39,
+    "files_with_coverage": 5
+  },
+  "fc2_reference": {
+    "total_modifications": 5,
+    "successful": 5
+  },
+  "created_at": "2026-05-02T23:06:14.696762"
+}

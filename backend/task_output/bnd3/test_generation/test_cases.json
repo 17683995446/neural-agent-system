@@ -1,0 +1,22 @@
+{
+  "task_id": "bnd3",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 0,
+    "unit_tests": 0,
+    "integration_tests": 0
+  },
+  "tests": [],
+  "coverage": {
+    "total_lines": 1,
+    "covered_lines": 0,
+    "coverage_percent": 0.0,
+    "files_with_coverage": 0
+  },
+  "fc2_reference": {
+    "total_modifications": 1,
+    "successful": 0
+  },
+  "created_at": "2026-05-01T22:13:36.860926"
+}

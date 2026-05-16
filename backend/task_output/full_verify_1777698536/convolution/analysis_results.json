@@ -1,0 +1,264 @@
+{
+  "task_id": "full_verify_1777698536",
+  "layer": "convolution",
+  "total_files": 8,
+  "analyzed_files": [
+    {
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "import logging",
+        "import sys",
+        "from logging.handlers import RotatingFileHandler",
+        "from pathlib import Path",
+        "from app.core.config import settings"
+      ],
+      "summary": "日志配置文件，用于配置应用程序的日志系统。创建logs目录，配置日志格式和处理器（包括RotatingFileHandler用于日志文件轮转，最大10MB，保留5个备份文件，以及StreamHandler输出到控制台）。日志级别根据settings.debug配置动态设置为DEBUG或INFO。",
+      "file_path": "app\\core\\logging.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:16.457789",
+      "total_lines": 32,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 21
+        },
+        {
+          "name": "connect_ray",
+          "line": 29
+        },
+        {
+          "name": "get_pending_tasks",
+          "line": 43
+        },
+        {
+          "name": "train_on_task",
+          "line": 60
+        },
+        {
+          "name": "_get_layer_agents",
+          "line": 82
+        },
+        {
+          "name": "run_training_loop",
+          "line": 93
+        },
+        {
+          "name": "stop",
+          "line": 127
+        },
+        {
+          "name": "main",
+          "line": 133
+        }
+      ],
+      "classes": [
+        {
+          "name": "RLTrainer",
+          "line": 20
+        }
+      ],
+      "imports": [
+        "import time",
+        "import ray (conditional)",
+        "from app.agents.trust.backward import BackwardPropagation",
+        "from app.core.config import settings",
+        "from app.core.logging import logger",
+        "from app.models.database import SessionLocal, TaskModel",
+        "from app.models.schemas import TaskStatus"
+      ],
+      "summary": "RL Trainer - 强化学习训练服务，通过Ray进行分布式反向传播训练，更新Agent信任度权重。训练器定期获取已完成的任务，执行反向传播更新Agent权重，支持本地和集群模式运行。",
+      "file_path": "app\\core\\rl_trainer.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:17.020964",
+      "total_lines": 165,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "get_settings",
+          "line": 44
+        }
+      ],
+      "classes": [
+        {
+          "name": "Settings",
+          "line": 8
+        }
+      ],
+      "imports": [
+        "from pydantic_settings import BaseSettings, SettingsConfigDict",
+        "from typing import Optional",
+        "from functools import lru_cache"
+      ],
+      "summary": "配置管理模块，使用Pydantic Settings定义应用程序配置类，支持从.env文件和环境变量加载配置，包含应用信息、API前缀、Redis、PostgreSQL、RabbitMQ、Milvus、多种LLM提供商（Anthropic、LiteLLM、OpenAI）、任务设置、信任值设置和CORS设置等配置项，并提供带缓存的get_settings()函数获取配置单例。",
+      "file_path": "app\\core\\config.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:20.149861",
+      "total_lines": 61,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "extract_json_from_llm_response",
+          "line": 17
+        },
+        {
+          "name": "extract_code_from_llm_response",
+          "line": 53
+        },
+        {
+          "name": "truncate_code",
+          "line": 77
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import json",
+        "import re",
+        "import logging",
+        "from typing import Any, Optional, Type",
+        "from pydantic import BaseModel, ValidationError"
+      ],
+      "summary": "LLM工具函数模块，提供从LLM响应中提取JSON和代码的实用函数，支持多种格式（代码块、裸JSON），并包含代码截断功能以处理过长内容",
+      "file_path": "app\\core\\llm_utils.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:20.233800",
+      "total_lines": 97,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "main",
+          "line": 29
+        }
+      ],
+      "classes": [
+        {
+          "name": "RLTrainer",
+          "line": 6
+        }
+      ],
+      "imports": [
+        "import logging"
+      ],
+      "summary": "这是一个强化学习训练器模块，提供了RLTrainer类来管理训练流程，包括启动(start)、训练(train)和停止(stop)功能，并包含主函数(main)来执行完整的训练流程，包含异常处理和资源释放机制。",
+      "file_path": "app\\core\\app\\core\\rl_trainer.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:20.639697",
+      "total_lines": 44,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "summary": "这是一个空的__init__.py文件，用于将当前目录标记为Python包",
+      "file_path": "app\\core\\__init__.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:24.564291",
+      "total_lines": 1,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "exponential_backoff",
+          "line": 20
+        }
+      ],
+      "classes": [
+        {
+          "name": "LLMClient",
+          "line": 27
+        }
+      ],
+      "imports": [
+        "import time",
+        "import asyncio",
+        "import random",
+        "import threading",
+        "from typing import Optional, List, Dict, Any",
+        "import requests",
+        "from app.core.config import settings",
+        "from app.core.logging import logger"
+      ],
+      "summary": "LLM客户端封装类，支持Anthropic API调用。提供降级/fallback机制，包含重试逻辑（指数退避策略）、成本估算、token使用统计等功能。文件定义了重试状态码常量、最大重试次数和退避延迟配置。",
+      "file_path": "app\\core\\llm_client.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:43.984334",
+      "total_lines": 101,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "on_worker_ready",
+          "line": 28
+        },
+        {
+          "name": "on_worker_shutdown",
+          "line": 32
+        },
+        {
+          "name": "dispatch_agent_task",
+          "line": 36
+        },
+        {
+          "name": "process_pipeline",
+          "line": 63
+        },
+        {
+          "name": "_handle_convolution",
+          "line": 90
+        },
+        {
+          "name": "_handle_pooling",
+          "line": 96
+        },
+        {
+          "name": "_handle_fullconnect",
+          "line": 102
+        },
+        {
+          "name": "_handle_output",
+          "line": 119
+        },
+        {
+          "name": "_handle_backward",
+          "line": 125
+        }
+      ],
+      "classes": [
+        {
+          "name": "Celery",
+          "line": 9
+        }
+      ],
+      "imports": [
+        "from celery import Celery",
+        "from celery.signals import worker_ready, worker_shutdown",
+        "from app.core.config import settings",
+        "from app.core.logging import logger"
+      ],
+      "summary": "Celery Worker异步任务调度服务，用于处理神经网络各层(卷积、池化、全连接、输出、反向传播)的Agent任务分发和完整管道处理。",
+      "file_path": "app\\core\\worker.py",
+      "task_id": "full_verify_1777698536",
+      "analyzed_at": "2026-05-02T13:09:46.417315",
+      "total_lines": 159,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 23,
+    "total_classes": 5
+  },
+  "created_at": "2026-05-02T13:09:46.418630"
+}

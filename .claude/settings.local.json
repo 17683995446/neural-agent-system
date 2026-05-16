@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf \"D:/DockerData\" \"D:/docker_files\")",
+      "Read(//d//**)"
+    ]
+  }
+}

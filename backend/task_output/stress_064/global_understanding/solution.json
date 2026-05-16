@@ -1,0 +1,123 @@
+{
+  "task_id": "stress_064",
+  "layer": "global_understanding",
+  "layer_name": "full_connect_1",
+  "solution": {
+    "overview": "根据用户需求「优化性能瓶颈」，分析得到代码工程包含 2 个文件、8 个函数、1 个类。将进行针对性的代码修改。",
+    "modification_list": [
+      {
+        "type": "function",
+        "target": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\utils.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\utils.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "__init__",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "load",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "transform",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "save",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "medium"
+      },
+      {
+        "type": "class",
+        "target": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_64_8i0v8g12\\src\\handler.py",
+        "line": null,
+        "action": "analyze_and_modify",
+        "priority": "high"
+      }
+    ],
+    "execution_order": [
+      "class:DataHandler",
+      "function:helper",
+      "function:format_output",
+      "function:process_data",
+      "function:validate_input",
+      "function:__init__",
+      "function:load",
+      "function:transform",
+      "function:save"
+    ],
+    "risk_points": [],
+    "similar_experiences_used": 0,
+    "architecture": {
+      "main_components": [
+        "DataHandler"
+      ],
+      "main_functions": [
+        "helper",
+        "format_output",
+        "process_data",
+        "validate_input",
+        "__init__",
+        "load",
+        "transform",
+        "save"
+      ],
+      "entry_points": [
+        "process_data",
+        "__init__"
+      ],
+      "data_flow": {
+        "note": "Simplified data flow analysis",
+        "estimated_flows": 1
+      }
+    }
+  },
+  "pooling_reference": {
+    "total_files": 0,
+    "user_requirement": "优化性能瓶颈"
+  },
+  "created_at": "2026-05-02T23:31:58.557756"
+}

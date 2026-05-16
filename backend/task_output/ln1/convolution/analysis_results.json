@@ -1,0 +1,39 @@
+{
+  "task_id": "ln1",
+  "layer": "convolution",
+  "total_files": 1,
+  "analyzed_files": [
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp6y8_y68x\\app.py",
+      "language": "unknown",
+      "total_lines": 9,
+      "functions": [
+        {
+          "name": "process",
+          "line": 3
+        },
+        {
+          "name": "run",
+          "line": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "App",
+          "line": 6
+        }
+      ],
+      "imports": [
+        "import os"
+      ],
+      "task_id": "ln1",
+      "analyzed_at": "2026-05-01T22:13:24.543391"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 2,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-01T22:13:24.543403"
+}

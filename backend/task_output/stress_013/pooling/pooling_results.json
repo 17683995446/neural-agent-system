@@ -1,0 +1,75 @@
+{
+  "task_id": "stress_013",
+  "layer": "pooling",
+  "user_requirement": "添加输入验证",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 5
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 13
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理模块，包含process_data函数用于将字典值转为大写字符串，validate_input函数用于验证非空字符串，以及DataHandler类用于数据加载、转换和保存操作。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_13_bbnfy_xk\\src\\handler.py",
+      "task_id": "stress_013",
+      "analyzed_at": "2026-05-02T22:35:31.520454",
+      "total_lines": 26,
+      "analyzed_by": "llm",
+      "llm_summary": "handler.py 中的 validate_input 函数和 DataHandler 类与输入验证需求直接相关，建议在此文件中添加或优化输入验证逻辑。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 4,
+    "total_classes": 1,
+    "unique_imports": [
+      "from typing import Optional"
+    ],
+    "top_functions": [
+      {
+        "name": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_13_bbnfy_xk\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_13_bbnfy_xk\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_13_bbnfy_xk\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_13_bbnfy_xk\\src\\handler.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_13_bbnfy_xk\\src\\handler.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 1,
+  "created_at": "2026-05-02T22:35:37.502400"
+}

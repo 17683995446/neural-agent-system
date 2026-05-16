@@ -1,0 +1,76 @@
+{
+  "task_id": "stress_032",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_32_e4b969pa\\src\\handler.py",
+      "language": "unknown",
+      "total_lines": 26,
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 4
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        },
+        {
+          "name": "__init__",
+          "line": 14
+        },
+        {
+          "name": "load",
+          "line": 18
+        },
+        {
+          "name": "transform",
+          "line": 21
+        },
+        {
+          "name": "save",
+          "line": 24
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 13
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "task_id": "stress_032",
+      "analyzed_at": "2026-05-02T23:09:14.610458",
+      "analyzed_by": "fallback"
+    },
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_32_e4b969pa\\src\\utils.py",
+      "language": "unknown",
+      "total_lines": 3,
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "task_id": "stress_032",
+      "analyzed_at": "2026-05-02T23:09:14.816054",
+      "analyzed_by": "fallback"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 8,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T23:09:14.817818"
+}

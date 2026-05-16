@@ -1,0 +1,256 @@
+{
+  "task_id": "e2e_final_1777729611",
+  "layer": "convolution",
+  "total_files": 8,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "extract_json_from_llm_response",
+          "line": 17
+        },
+        {
+          "name": "extract_code_from_llm_response",
+          "line": 53
+        },
+        {
+          "name": "truncate_code",
+          "line": 73
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import json",
+        "import re",
+        "import logging",
+        "from typing import Any, Optional, Type",
+        "from pydantic import BaseModel, ValidationError"
+      ],
+      "summary": "LLM工具函数模块，提供从LLM响应中提取JSON、提取代码块、以及代码截断等功能，支持多种格式的JSON解析和Pydantic schema验证。",
+      "file_path": "app\\core\\llm_utils.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:14.940834",
+      "total_lines": 97,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "save_layer_output",
+          "line": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import json",
+        "from pathlib import Path",
+        "from typing import Any"
+      ],
+      "summary": "统一的层输出保存工具，提供save_layer_output函数用于将数据保存为JSON文件到指定的任务输出目录",
+      "file_path": "app\\core\\io_utils.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:15.398443",
+      "total_lines": 13,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "exponential_backoff",
+          "line": 21
+        }
+      ],
+      "classes": [
+        {
+          "name": "LLMClient",
+          "line": 27
+        }
+      ],
+      "imports": [
+        "import time",
+        "import asyncio",
+        "import random",
+        "import threading",
+        "from typing import Optional, List, Dict, Any",
+        "import requests",
+        "from app.core.config import settings",
+        "from app.core.logging import logger"
+      ],
+      "summary": "LLM客户端封装类，支持Anthropic API调用，含降级/fallback机制、重试逻辑和成本追踪功能",
+      "file_path": "app\\core\\llm_client.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:16.046942",
+      "total_lines": 101,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "summary": "这是一个空的__init__.py文件，用于将当前目录标记为Python包，目前不包含任何初始化代码、函数、类或导入语句。",
+      "file_path": "app\\core\\__init__.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:18.616508",
+      "total_lines": 1,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "get_settings",
+          "line": 53
+        }
+      ],
+      "classes": [
+        {
+          "name": "Settings",
+          "line": 6
+        }
+      ],
+      "imports": [
+        "from pydantic_settings import BaseSettings, SettingsConfigDict",
+        "from typing import Optional",
+        "from functools import lru_cache"
+      ],
+      "summary": "配置管理模块，使用Pydantic Settings定义应用配置类。包含应用信息、API前缀、Redis/PostgreSQL/RabbitMQ/Milvus连接参数、LLM模型配置（Anthropic主模型和LiteLLM/OpenAI备选）、任务参数、信任值设置和CORS配置。提供@lru_cache装饰的get_settings()函数返回单例配置实例。",
+      "file_path": "app\\core\\config.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:40.566014",
+      "total_lines": 61,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 22
+        },
+        {
+          "name": "connect_ray",
+          "line": 28
+        },
+        {
+          "name": "get_pending_tasks",
+          "line": 44
+        },
+        {
+          "name": "train_on_task",
+          "line": 64
+        },
+        {
+          "name": "_get_layer_agents",
+          "line": 87
+        },
+        {
+          "name": "run_training_loop",
+          "line": 101
+        },
+        {
+          "name": "stop",
+          "line": 135
+        },
+        {
+          "name": "main",
+          "line": 139
+        }
+      ],
+      "classes": [
+        {
+          "name": "RLTrainer",
+          "line": 20
+        }
+      ],
+      "imports": [
+        "import time",
+        "import ray (conditional)",
+        "from app.agents.trust.backward import BackwardPropagation",
+        "from app.core.config import settings",
+        "from app.core.logging import logger",
+        "from app.models.database import SessionLocal, TaskModel",
+        "from app.models.schemas import TaskStatus"
+      ],
+      "summary": "RL Trainer模块 - 强化学习训练服务，通过Ray进行分布式训练。从数据库获取已完成或已收到反馈的任务，调用BackwardPropagation执行反向传播更新Agent信任度权重，支持本地和集群模式运行。",
+      "file_path": "app\\core\\rl_trainer.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:45.411527",
+      "total_lines": 165,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "on_worker_ready",
+          "line": 32
+        },
+        {
+          "name": "on_worker_shutdown",
+          "line": 38
+        },
+        {
+          "name": "dispatch_agent_task",
+          "line": 43
+        },
+        {
+          "name": "process_pipeline",
+          "line": 70
+        },
+        {
+          "name": "_handle_convolution",
+          "line": 95
+        },
+        {
+          "name": "_handle_pooling",
+          "line": 101
+        },
+        {
+          "name": "_handle_fullconnect",
+          "line": 107
+        },
+        {
+          "name": "_handle_output",
+          "line": 121
+        },
+        {
+          "name": "_handle_backward",
+          "line": 127
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "from celery import Celery",
+        "from celery.signals import worker_ready, worker_shutdown",
+        "from app.core.config import settings",
+        "from app.core.logging import logger"
+      ],
+      "summary": "Celery异步任务Worker，用于调度神经网络Agent任务。定义了两个Celery任务：dispatch_agent_task用于分发卷积、池化、全连接、输出、反向传播等类型的Agent任务；process_pipeline用于按顺序处理完整的神经网络管道。文件还包含Worker就绪和关闭的信号回调函数，以及各层任务的处理函数。",
+      "file_path": "app\\core\\worker.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:53.530777",
+      "total_lines": 159,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "import logging",
+        "import sys",
+        "from logging.handlers import RotatingFileHandler",
+        "from pathlib import Path",
+        "from app.core.config import settings"
+      ],
+      "summary": "日志配置文件，用于配置应用程序的日志系统。创建logs目录，设置日志格式（包含时间、名称、级别和消息），配置根日志记录器使用RotatingFileHandler（最大10MB，保留5个备份）和StreamHandler（输出到stdout），根据settings.debug决定日志级别（DEBUG或INFO）。",
+      "file_path": "app\\core\\logging.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:49:12.873940",
+      "total_lines": 32,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 23,
+    "total_classes": 3
+  },
+  "created_at": "2026-05-02T21:49:12.875446"
+}

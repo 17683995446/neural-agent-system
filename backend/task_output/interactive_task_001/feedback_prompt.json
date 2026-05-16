@@ -1,0 +1,14 @@
+{
+  "task_id": "interactive_task_001",
+  "current_iteration": 1,
+  "max_iteration": 5,
+  "status": "awaiting_feedback",
+  "iteration_summary": {
+    "files_analyzed": 4,
+    "modifications_planned": 15,
+    "modifications_successful": 15,
+    "tests_generated": 30,
+    "report_path": "task_output\\interactive_task_001\\output\\task_report.md"
+  },
+  "message": "请提供反馈: satisfaction_score(1-5), stop_iteration(true/false), comments"
+}

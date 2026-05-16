@@ -1,0 +1,124 @@
+{
+  "task_id": "stress_045",
+  "layer": "code_generation",
+  "layer_name": "full_connect_2",
+  "summary": {
+    "total_modifications": 9,
+    "successful": 9,
+    "failed": 0
+  },
+  "modifications": [
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify process_data (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on process_data - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "process_data",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 3,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify __init__ (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on __init__ - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "__init__",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 5,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "def helper(x): return x * 2\ndef format_output(s): return str(s).strip()\n",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify format_output (fallback - manual review)\ndef helper(x): return x * 2\ndef format_output(s): return str(s).strip()\n",
+      "diff": "[FALLBACK] analyze_and_modify on format_output - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\utils.py",
+      "target": "format_output",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 2,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify save (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on save - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "save",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 8,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify validate_input (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on validate_input - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "validate_input",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 4,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify load (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on load - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "load",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 6,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "def helper(x): return x * 2\ndef format_output(s): return str(s).strip()\n",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify helper (fallback - manual review)\ndef helper(x): return x * 2\ndef format_output(s): return str(s).strip()\n",
+      "diff": "[FALLBACK] analyze_and_modify on helper - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\utils.py",
+      "target": "helper",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 1,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify transform (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on transform - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "transform",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 7,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "# [NeuralAgent] TODO: analyze_and_modify DataHandler (fallback - manual review)\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True\n",
+      "diff": "[FALLBACK] analyze_and_modify on DataHandler - marked for manual review",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_45_cws82f01\\src\\handler.py",
+      "target": "DataHandler",
+      "generated_by": "template",
+      "requires_manual_review": true,
+      "status": "success",
+      "execution_order": 9,
+      "syntax_valid": true
+    }
+  ],
+  "fc1_reference": {
+    "solution_overview": "根据用户需求「添加单元测试覆盖」，分析得到代码工程包含 2 个文件、8 个函数、1 个类。将进行针对性的代码修改。"
+  },
+  "created_at": "2026-05-02T23:18:43.875088"
+}

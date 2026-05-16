@@ -1,0 +1,27 @@
+{
+  "task_id": "test_003",
+  "layer": "code_generation",
+  "layer_name": "full_connect_2",
+  "summary": {
+    "total_modifications": 1,
+    "successful": 1,
+    "failed": 0
+  },
+  "modifications": [
+    {
+      "original_code": "def hello(): return \"world\"",
+      "modified_code": "def hello() -> str: return \"world\"",
+      "diff": "--- original\n+++ modified\n+def hello() -> str: return \"world\"",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp_sd3khv2\\src\\handler.py",
+      "target": "hello",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 1,
+      "syntax_valid": true
+    }
+  ],
+  "fc1_reference": {
+    "solution_overview": "为handler.py中的hello函数添加类型注解，包括参数类型和返回值类型的注解"
+  },
+  "created_at": "2026-05-02T01:50:39.819803"
+}

@@ -1,0 +1,60 @@
+{
+  "task_id": "stress_001",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "工具函数文件，包含两个辅助函数：helper用于数值翻倍，format_output用于字符串去空格处理。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_1_j95pc6th\\src\\utils.py",
+      "task_id": "stress_001",
+      "analyzed_at": "2026-05-02T21:51:12.068653",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 5
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 13
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理工具文件，包含通用数据处理函数和一个DataHandler类，提供数据加载、转换和保存功能。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_1_j95pc6th\\src\\handler.py",
+      "task_id": "stress_001",
+      "analyzed_at": "2026-05-02T21:51:12.814892",
+      "total_lines": 26,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 4,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T21:51:12.818443"
+}

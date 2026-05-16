@@ -1,0 +1,38 @@
+{
+  "task_id": "test_000",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 2,
+    "unit_tests": 1,
+    "integration_tests": 1
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_handler.py",
+      "test_code": "import pytest\nimport sys\nimport os\n\n# Add the src directory to the path\nsys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))\n\nfrom handler import hello\n\n\nclass TestHello:\n    \"\"\"测试 hello 函数\"\"\"\n    \n    def test_hello_returns_world(self):\n        \"\"\"正常用例：验证 hello() 返回 'world'\"\"\"\n        result = hello()\n        assert result == \"world\"\n    \n    def test_hello_returns_string(self):\n        \"\"\"边界用例：验证返回值类型是字符串\"\"\"\n        result = hello()\n        assert isinstance(result, str)\n    \n    def test_hello_returns_non_empty_string(self):\n        \"\"\"边界用例：验证返回值非空\"\"\"\n        result = hello()\n        assert len(result) > 0\n    \n    def test_hello_returns_exact_value(self):\n        \"\"\"异常用例：验证返回值的精确值\"\"\"\n        result = hello()\n        assert result == \"world\"\n        assert result != \"hello\"\n        assert result != \"\"\n    \n    def test_hello_returns_correct_length(self):\n        \"\"\"边界用例：验证返回值长度\"\"\"\n        result = hello()\n        assert len(result) == 5\n    \n    def test_hello_no_side_effects(self):\n        \"\"\"异常用例：验证函数无副作用，可重复调用\"\"\"\n        result1 = hello()\n        result2 = hello()\n        result3 = hello()\n        assert result1 == result2 == result3 == \"world\"",
+      "target": "hello",
+      "test_type": "unit",
+      "generated_by": "llm",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_handler.py",
+      "test_code": "import pytest\n\nclass TestIntegrationHello:\n    \"\"\"Integration tests for hello\"\"\"\n\n    def test_hello_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_hello_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "hello",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 2,
+    "covered_lines": 1,
+    "coverage_percent": 50.0,
+    "files_with_coverage": 1
+  },
+  "fc2_reference": {
+    "total_modifications": 1,
+    "successful": 1
+  },
+  "created_at": "2026-05-02T01:46:14.949417"
+}

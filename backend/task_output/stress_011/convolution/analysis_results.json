@@ -1,0 +1,60 @@
+{
+  "task_id": "stress_011",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "工具函数文件，包含两个辅助函数：helper用于数值翻倍，format_output用于字符串格式化和去除空白",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_11_ud6rbgia\\src\\utils.py",
+      "task_id": "stress_011",
+      "analyzed_at": "2026-05-02T22:28:53.589979",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 6
+        },
+        {
+          "name": "validate_input",
+          "line": 11
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 14
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理工具文件，包含独立函数process_data（字典值转大写）、validate_input（字符串非空验证）以及DataHandler类（提供数据加载、转换和保存功能）",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_11_ud6rbgia\\src\\handler.py",
+      "task_id": "stress_011",
+      "analyzed_at": "2026-05-02T22:28:54.884958",
+      "total_lines": 26,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 4,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T22:28:54.886441"
+}

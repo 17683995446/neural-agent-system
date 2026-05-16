@@ -1,0 +1,97 @@
+{
+  "task_id": "stress_012",
+  "layer": "pooling",
+  "user_requirement": "重构代码提高可读性",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "工具函数模块，包含两个辅助函数：helper用于数值翻倍计算，format_output用于字符串格式化输出（去除首尾空白字符）",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\utils.py",
+      "task_id": "stress_012",
+      "analyzed_at": "2026-05-02T22:32:23.804795",
+      "total_lines": 3,
+      "analyzed_by": "llm",
+      "llm_summary": "两个文件包含4个函数和1个类需要重构。utils.py的helper和format_output可能存在职责不清问题；handler.py的DataHandler类及其process_data、validate_input方法可能包含复杂逻辑，建议拆分为更小的单一职责函数，添加清晰的命名和文档字符串以提高可读性。",
+      "compressed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 4
+        },
+        {
+          "name": "validate_input",
+          "line": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 12
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "文件包含数据处理工具，包括将字典值转换为大写的process_data函数、验证输入非空的validate_input函数，以及DataHandler类用于数据加载、转换和保存操作。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\handler.py",
+      "task_id": "stress_012",
+      "analyzed_at": "2026-05-02T22:32:25.456412",
+      "total_lines": 26,
+      "analyzed_by": "llm",
+      "llm_summary": "两个文件包含4个函数和1个类需要重构。utils.py的helper和format_output可能存在职责不清问题；handler.py的DataHandler类及其process_data、validate_input方法可能包含复杂逻辑，建议拆分为更小的单一职责函数，添加清晰的命名和文档字符串以提高可读性。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 4,
+    "total_classes": 1,
+    "unique_imports": [
+      "from typing import Optional"
+    ],
+    "top_functions": [
+      {
+        "name": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\handler.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_12_z_hgndcu\\src\\handler.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 2,
+  "created_at": "2026-05-02T22:32:32.562211"
+}

@@ -1,0 +1,77 @@
+[project]
+name = "neural-agent-system"
+version = "1.0.0"
+description = "类神经网络多Agent协作系统"
+requires-python = ">=3.10"
+
+dependencies = [
+    # FastAPI & Pydantic
+    "fastapi>=0.110.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.1.0",
+    "uvicorn[standard]>=0.27.0",
+
+    # 代码解析
+    "tree-sitter>=0.24.0",
+    "tree-sitter-python>=0.23.4",
+    "tree-sitter-javascript>=0.23.1",
+    "tree-sitter-typescript>=0.23.2",
+    "tree-sitter-java>=0.23.5",
+    "tree-sitter-go>=0.23.4",
+    "tree-sitter-rust>=0.23.2",
+    "tree-sitter-c>=0.23.4",
+    "tree-sitter-cpp>=0.23.4",
+    "tree-sitter-ruby>=0.23.1",
+
+    # LLM适配
+    "litellm>=1.40.0",
+    "langchain>=0.2.0",
+    "langchain-openai>=0.1.0",
+    "langchain-community>=0.2.0",
+
+    # 反向传播
+    "ray[rllib]>=2.24.0",
+
+    # 数据存储
+    "redis>=5.0.0",
+    "pymilvus>=2.4.0",
+    "psycopg2-binary>=2.9.9",
+    "sqlalchemy>=2.0.0",
+
+    # 消息队列
+    "pika>=1.3.2",
+    "celery>=5.3.0",
+
+    # HTTP客户端
+    "requests>=2.31.0",
+
+    # 工具
+    "gitpython>=3.1.43",
+    "python-multipart>=0.0.9",
+    "pyyaml>=6.0.1",
+
+    # 文档生成
+    "markdown>=3.6.0",
+    "jinja2>=3.1.4",
+
+    # 测试
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0",
+    "testcontainers>=4.0.0",
+
+    # 监控
+    "prometheus-client>=0.21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "ruff>=0.3.0",
+    "mypy>=1.10.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

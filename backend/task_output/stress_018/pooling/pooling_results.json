@@ -1,0 +1,97 @@
+{
+  "task_id": "stress_018",
+  "layer": "pooling",
+  "user_requirement": "添加配置管理",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "工具函数文件，包含两个辅助函数：helper 用于数值翻倍计算，format_output 用于格式化输出字符串（去除首尾空白）",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\utils.py",
+      "task_id": "stress_018",
+      "analyzed_at": "2026-05-02T22:51:34.526226",
+      "total_lines": 3,
+      "analyzed_by": "llm",
+      "llm_summary": "当前代码结构中，handler.py 的 DataHandler 类适合添加配置管理功能，utils.py 的 helper 函数可用于配置相关的辅助操作。建议在 handler.py 中添加配置加载和管理的功能模块。",
+      "compressed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 5
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 13
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理模块，包含通用的process_data函数用于数据转换（大写处理）和validate_input函数用于输入验证。DataHandler类提供数据加载、转换和保存的封装接口。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\handler.py",
+      "task_id": "stress_018",
+      "analyzed_at": "2026-05-02T22:51:41.092914",
+      "total_lines": 26,
+      "analyzed_by": "llm",
+      "llm_summary": "当前代码结构中，handler.py 的 DataHandler 类适合添加配置管理功能，utils.py 的 helper 函数可用于配置相关的辅助操作。建议在 handler.py 中添加配置加载和管理的功能模块。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 4,
+    "total_classes": 1,
+    "unique_imports": [
+      "from typing import Optional"
+    ],
+    "top_functions": [
+      {
+        "name": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\handler.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_18_viecallo\\src\\handler.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 2,
+  "created_at": "2026-05-02T22:51:50.973571"
+}

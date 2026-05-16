@@ -1,0 +1,38 @@
+{
+  "task_id": "test_001",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 2,
+    "unit_tests": 1,
+    "integration_tests": 1
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_handler.py",
+      "test_code": "import pytest\nimport sys\nsys.path.insert(0, r\"C:\\Users\\23583\\AppData\\Local\\Temp\\tmp4p334z3y\\src\")\nfrom handler import hello\n\nclass TestHello:\n    # 正常用例\n    def test_hello_returns_world(self):\n        \"\"\"测试hello函数返回'world'\"\"\"\n        assert hello() == \"world\"\n    \n    def test_hello_returns_string_type(self):\n        \"\"\"测试返回值类型是str\"\"\"\n        assert isinstance(hello(), str)\n    \n    def test_hello_returns_exact_value(self):\n        \"\"\"测试返回值精确为'world'\"\"\"\n        result = hello()\n        assert result == \"world\"\n        assert len(result) == 5\n    \n    # 边界用例\n    def test_hello_not_none(self):\n        \"\"\"测试返回值不为None\"\"\"\n        assert hello() is not None\n    \n    def test_hello_not_empty_string(self):\n        \"\"\"测试返回值不是空字符串\"\"\"\n        assert hello() != \"\"\n    \n    def test_hello_length_boundary(self):\n        \"\"\"测试返回值长度边界\"\"\"\n        result = hello()\n        assert len(result) == 5  # \"world\"长度为5\n    \n    def test_hello_no_whitespace(self):\n        \"\"\"测试返回值不包含前后空格\"\"\"\n        result = hello()\n        assert result == result.strip()\n    \n    # 异常用例\n    def test_hello_no_exception_raised(self):\n        \"\"\"测试函数调用不抛出异常\"\"\"\n        try:\n            hello()\n        except Exception as e:\n            pytest.fail(f\"Function raised unexpected exception: {e}\")\n    \n    def test_hello_multiple_calls(self):\n        \"\"\"测试多次调用返回一致结果\"\"\"\n        results = [hello() for _ in range(10)]\n        assert all(r == \"world\" for r in results)\n    \n    def test_hello_is_callable(self):\n        \"\"\"测试hello是 callable 对象\"\"\"\n        assert callable(hello)",
+      "target": "hello",
+      "test_type": "unit",
+      "generated_by": "llm",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_handler.py",
+      "test_code": "import pytest\n\nclass TestIntegrationHello:\n    \"\"\"Integration tests for hello\"\"\"\n\n    def test_hello_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_hello_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "hello",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 1,
+    "covered_lines": 0,
+    "coverage_percent": 0.0,
+    "files_with_coverage": 1
+  },
+  "fc2_reference": {
+    "total_modifications": 1,
+    "successful": 1
+  },
+  "created_at": "2026-05-02T01:48:06.871212"
+}

@@ -1,0 +1,188 @@
+{
+  "task_id": "e2e_final_1777729611",
+  "layer": "pooling",
+  "user_requirement": "Add input validation to the config module",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "get_settings",
+          "line": 53
+        }
+      ],
+      "classes": [
+        {
+          "name": "Settings",
+          "line": 6
+        }
+      ],
+      "imports": [
+        "from pydantic_settings import BaseSettings, SettingsConfigDict",
+        "from typing import Optional",
+        "from functools import lru_cache"
+      ],
+      "summary": "配置管理模块，使用Pydantic Settings定义应用配置类。包含应用信息、API前缀、Redis/PostgreSQL/RabbitMQ/Milvus连接参数、LLM模型配置（Anthropic主模型和LiteLLM/OpenAI备选）、任务参数、信任值设置和CORS配置。提供@lru_cache装饰的get_settings()函数返回单例配置实例。",
+      "file_path": "app\\core\\config.py",
+      "task_id": "e2e_final_1777729611",
+      "analyzed_at": "2026-05-02T21:47:40.566014",
+      "total_lines": 61,
+      "analyzed_by": "llm",
+      "llm_summary": "目标文件为app\\core\\config.py，其中包含Settings类和get_settings函数。需要为config模块添加输入验证，主要关注Settings类的配置参数验证以及get_settings函数的输入参数验证。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 8,
+    "total_functions": 23,
+    "total_classes": 3,
+    "unique_imports": [
+      "import random",
+      "import re",
+      "from celery import Celery",
+      "import logging",
+      "from typing import Any, Optional, Type",
+      "from celery.signals import worker_ready, worker_shutdown",
+      "from typing import Optional",
+      "from app.core.config import settings",
+      "from app.models.database import SessionLocal, TaskModel",
+      "from typing import Optional, List, Dict, Any",
+      "import sys",
+      "from pydantic_settings import BaseSettings, SettingsConfigDict",
+      "from app.models.schemas import TaskStatus",
+      "from pydantic import BaseModel, ValidationError",
+      "from logging.handlers import RotatingFileHandler",
+      "from functools import lru_cache",
+      "from pathlib import Path",
+      "import threading",
+      "import ray (conditional)",
+      "import asyncio",
+      "import requests",
+      "from app.agents.trust.backward import BackwardPropagation",
+      "import json",
+      "from app.core.logging import logger",
+      "import time",
+      "from typing import Any"
+    ],
+    "top_functions": [
+      {
+        "name": "extract_json_from_llm_response",
+        "file": "app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "extract_code_from_llm_response",
+        "file": "app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "truncate_code",
+        "file": "app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "save_layer_output",
+        "file": "app\\core\\io_utils.py",
+        "line": null
+      },
+      {
+        "name": "exponential_backoff",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "get_settings",
+        "file": "app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "__init__",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "connect_ray",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "get_pending_tasks",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "train_on_task",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "_get_layer_agents",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "run_training_loop",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "stop",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "main",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "on_worker_ready",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "on_worker_shutdown",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "dispatch_agent_task",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "process_pipeline",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_convolution",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_pooling",
+        "file": "app\\core\\worker.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "LLMClient",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "Settings",
+        "file": "app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "RLTrainer",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 1,
+  "created_at": "2026-05-02T21:49:25.932259"
+}

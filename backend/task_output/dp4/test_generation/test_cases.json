@@ -1,0 +1,65 @@
+{
+  "task_id": "dp4",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 6,
+    "unit_tests": 3,
+    "integration_tests": 3
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_app.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestProcess:\n    \"\"\"Test cases for process\"\"\"\n\n    def test_process_exists(self):\n        \"\"\"Test that process exists\"\"\"\n        pass\n\n    def test_process_execution(self):\n        \"\"\"Test process execution\"\"\"\n        pass\n\n    def test_process_edge_cases(self):\n        \"\"\"Test edge cases for process\"\"\"\n        pass\n",
+      "target": "process",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_app.py",
+      "test_code": "import pytest\n\nclass TestIntegrationProcess:\n    \"\"\"Integration tests for process\"\"\"\n\n    def test_process_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_process_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "process",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_app.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestRun:\n    \"\"\"Test cases for run\"\"\"\n\n    def test_run_exists(self):\n        \"\"\"Test that run exists\"\"\"\n        pass\n\n    def test_run_execution(self):\n        \"\"\"Test run execution\"\"\"\n        pass\n\n    def test_run_edge_cases(self):\n        \"\"\"Test edge cases for run\"\"\"\n        pass\n",
+      "target": "run",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_app.py",
+      "test_code": "import pytest\n\nclass TestIntegrationRun:\n    \"\"\"Integration tests for run\"\"\"\n\n    def test_run_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_run_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "run",
+      "test_type": "integration",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/test_app.py",
+      "test_code": "import pytest\nfrom pathlib import Path\n\nclass TestApp:\n    \"\"\"Test cases for App\"\"\"\n\n    def test_App_exists(self):\n        \"\"\"Test that App exists\"\"\"\n        pass\n\n    def test_App_execution(self):\n        \"\"\"Test App execution\"\"\"\n        pass\n\n    def test_App_edge_cases(self):\n        \"\"\"Test edge cases for App\"\"\"\n        pass\n",
+      "target": "App",
+      "test_type": "unit",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_app.py",
+      "test_code": "import pytest\n\nclass TestIntegrationApp:\n    \"\"\"Integration tests for App\"\"\"\n\n    def test_App_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_App_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "App",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 3,
+    "covered_lines": 0,
+    "coverage_percent": 0.0,
+    "files_with_coverage": 3
+  },
+  "fc2_reference": {
+    "total_modifications": 3,
+    "successful": 3
+  },
+  "created_at": "2026-05-01T22:13:20.426898"
+}

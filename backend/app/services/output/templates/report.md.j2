@@ -1,0 +1,63 @@
+# 代码修改任务报告
+
+## 任务概述
+- **任务ID**: {{ task_id }}
+- **用户需求**: {{ user_requirement }}
+- **执行时间**: {{ timestamp }}
+- **总耗时**: {{ execution_time_ms }}ms
+
+## 代码修改清单
+
+### 修改概览
+{{ fc2_summary }}
+
+### 详细修改
+
+{% for i, mod in modifications %}
+#### {{ i }}. {{ mod.target }}
+- **文件**: {{ mod.file_path }}
+- **状态**: {{ mod.status }}
+{% if mod.status == "success" and mod.diff %}
+
+```diff
+{{ mod.diff }}
+```
+{% endif %}
+
+{% endfor %}
+## 测试用例与执行结果
+
+### 测试覆盖率
+- **总覆盖率**: {{ coverage_percent }}%
+- **覆盖行数**: {{ covered_lines }}/{{ total_lines }}
+
+### 测试用例清单
+
+{% for i, test in tests %}
+#### {{ i }}. {{ test.test_type_title }} Test - {{ test.target }}
+- **测试文件**: {{ test.test_path }}
+{% if test.test_code %}
+
+```python
+{{ test.test_code }}
+```
+{% endif %}
+
+{% endfor %}
+{% if main_components %}
+## 架构分析
+
+### 主要组件
+{% for comp in main_components %}
+- {{ comp }}
+{% endfor %}
+{% endif %}
+{% if risk_points %}
+## 风险提示
+
+{% for risk in risk_points %}
+- **[{{ risk.severity }}]** {{ risk.type }}: {{ risk.description }}
+{% endfor %}
+{% endif %}
+---
+*本报告由Neural Agent System自动生成*

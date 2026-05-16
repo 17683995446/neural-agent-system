@@ -1,0 +1,66 @@
+{
+  "task_id": "stress_021",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "工具函数文件，包含两个辅助函数：helper用于数值翻倍，format_output用于字符串格式化（去除首尾空白）",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_21_y8i9imeu\\src\\utils.py",
+      "task_id": "stress_021",
+      "analyzed_at": "2026-05-02T23:04:48.242833",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 4
+        },
+        {
+          "name": "validate_input",
+          "line": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 12,
+          "methods": [
+            "__init__",
+            "load",
+            "transform",
+            "save"
+          ]
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理模块，包含通用的process_data函数用于字典值转大写，validate_input函数用于字符串非空验证，以及DataHandler类提供数据加载、转换和保存功能。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_21_y8i9imeu\\src\\handler.py",
+      "task_id": "stress_021",
+      "analyzed_at": "2026-05-02T23:04:50.697866",
+      "total_lines": 26,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 4,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T23:04:50.698959"
+}

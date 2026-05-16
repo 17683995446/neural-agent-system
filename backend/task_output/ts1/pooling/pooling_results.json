@@ -1,0 +1,35 @@
+{
+  "task_id": "ts1",
+  "layer": "pooling",
+  "user_requirement": "test",
+  "compressed_features": [],
+  "global_features": {
+    "total_files": 1,
+    "total_functions": 2,
+    "total_classes": 1,
+    "unique_imports": [
+      "import os"
+    ],
+    "top_functions": [
+      {
+        "name": "process",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp3v_l35dg\\app.py",
+        "line": null
+      },
+      {
+        "name": "run",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp3v_l35dg\\app.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "App",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmp3v_l35dg\\app.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 0,
+  "created_at": "2026-05-01T22:13:28.650294"
+}

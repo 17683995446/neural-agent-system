@@ -1,0 +1,132 @@
+{
+  "task_id": "stress_020",
+  "layer": "global_understanding",
+  "layer_name": "full_connect_1",
+  "solution": {
+    "overview": "为所有函数和类方法添加完整的类型注解，包括参数类型和返回值类型。需要使用Python typing模块中的Union、List、Dict、Optional等类型，确保类型注解覆盖所有函数的参数和返回值。",
+    "modification_list": [
+      {
+        "type": "function",
+        "target": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\utils.py",
+        "line": null,
+        "action": "添加函数签名类型注解，使用Union和Optional类型声明参数，使用Any类型声明返回值（如果具体类型未知）。示例：def helper(data: Any, config: Optional[Dict[str, Any]] = None) -> Any:",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\utils.py",
+        "line": null,
+        "action": "添加函数签名类型注解，参数使用Dict/List类型，返回值使用str类型。示例：def format_output(data: Union[Dict[str, Any], List[Any]], template: Optional[str] = None) -> str:",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+        "line": null,
+        "action": "添加函数签名类型注解，参数使用DataFrame/Series类型，返回值使用DataFrame或Dict类型。需要导入pandas相关类型。",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+        "line": null,
+        "action": "添加函数签名类型注解，参数使用Any类型，返回值使用bool类型。可选添加错误信息返回类型为Tuple[bool, Optional[str]]。",
+        "priority": "high"
+      },
+      {
+        "type": "class",
+        "target": "DataHandler.__init__",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+        "line": null,
+        "action": "为__init__方法添加类型注解，声明所有实例变量的类型。如果有config参数，使用Optional[Dict[str, Any]]类型。示例：def __init__(self, config: Optional[Dict[str, Any]] = None) -> None:",
+        "priority": "high"
+      },
+      {
+        "type": "class",
+        "target": "DataHandler.load",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+        "line": null,
+        "action": "为load方法添加类型注解，声明file_path参数为str或Path类型，返回值为DataFrame类型或None。示例：def load(self, file_path: Union[str, Path]) -> Optional[DataFrame]:",
+        "priority": "high"
+      },
+      {
+        "type": "class",
+        "target": "DataHandler.transform",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+        "line": null,
+        "action": "为transform方法添加类型注解，声明参数和返回值类型。如果接受DataFrame返回DataFrame，如果接受Dict返回Dict。示例：def transform(self, data: DataFrame, rules: Dict[str, Any]) -> DataFrame:",
+        "priority": "high"
+      },
+      {
+        "type": "class",
+        "target": "DataHandler.save",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+        "line": null,
+        "action": "为save方法添加类型注解，声明data参数为DataFrame类型，file_path为str或Path类型，返回值为bool类型表示是否保存成功。示例：def save(self, data: DataFrame, file_path: Union[str, Path]) -> bool:",
+        "priority": "high"
+      }
+    ],
+    "execution_order": [
+      "class:DataHandler",
+      "function:helper",
+      "function:format_output",
+      "function:process_data",
+      "function:validate_input"
+    ],
+    "risk_points": [
+      {
+        "type": "类型推断风险",
+        "description": "在添加类型注解前需要查看函数实际实现代码，以确保类型推断准确，避免使用过于宽泛的Any类型导致类型检查失去意义",
+        "severity": "medium"
+      },
+      {
+        "type": "导入依赖风险",
+        "description": "需要添加typing模块的导入语句，可能需要导入Union、Optional、List、Dict、Any等类型。如果使用pandas等第三方库，也需要添加相应的类型注解支持",
+        "severity": "medium"
+      },
+      {
+        "type": "向后兼容性风险",
+        "description": "添加类型注解可能会影响现有的动态类型代码，特别是如果原代码中存在类型不一致的调用方式。需要确保类型注解与实际使用场景一致",
+        "severity": "low"
+      },
+      {
+        "type": "参数默认值风险",
+        "description": "如果函数参数使用None作为默认值，需要使用Optional类型包装。例如：param: Optional[int] = None",
+        "severity": "low"
+      }
+    ],
+    "similar_experiences_used": 0,
+    "architecture": {
+      "main_components": [
+        "DataHandler"
+      ],
+      "main_functions": [
+        "helper",
+        "format_output",
+        "process_data",
+        "validate_input",
+        "DataHandler.__init__",
+        "DataHandler.load",
+        "DataHandler.transform",
+        "DataHandler.save"
+      ],
+      "entry_points": [
+        "process_data",
+        "DataHandler.__init__"
+      ],
+      "data_flow": {
+        "note": "Simplified data flow analysis",
+        "estimated_flows": 1
+      }
+    }
+  },
+  "pooling_reference": {
+    "total_files": 2,
+    "user_requirement": "为所有函数添加类型注解"
+  },
+  "created_at": "2026-05-02T23:02:23.635793"
+}

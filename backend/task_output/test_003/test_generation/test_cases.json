@@ -1,0 +1,38 @@
+{
+  "task_id": "test_003",
+  "layer": "test_generation",
+  "layer_name": "full_connect_3",
+  "summary": {
+    "total_tests": 2,
+    "unit_tests": 1,
+    "integration_tests": 1
+  },
+  "tests": [
+    {
+      "test_file_path": "tests/test_handler.py",
+      "test_code": "import pytest\nimport sys\nimport os\n\n# 将src目录添加到路径\nsys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))\n\nfrom handler import hello\n\n\nclass TestHello:\n    \"\"\"测试hello函数\"\"\"\n    \n    # 正常用例\n    def test_hello_returns_world(self):\n        \"\"\"测试hello函数返回'world'\"\"\"\n        result = hello()\n        assert result == \"world\"\n    \n    def test_hello_returns_string(self):\n        \"\"\"测试hello函数返回字符串类型\"\"\"\n        result = hello()\n        assert isinstance(result, str)\n    \n    def test_hello_returns_non_empty_string(self):\n        \"\"\"测试hello函数返回非空字符串\"\"\"\n        result = hello()\n        assert len(result) > 0\n    \n    # 边界用例\n    def test_hello_returns_exact_value(self):\n        \"\"\"测试hello函数返回精确值'world'\"\"\"\n        result = hello()\n        assert result == \"world\"\n        assert result != \"\"\n        assert result != \"hello\"\n        assert result != \"Hello\"\n    \n    def test_hello_multiple_calls(self):\n        \"\"\"测试多次调用返回一致结果\"\"\"\n        result1 = hello()\n        result2 = hello()\n        result3 = hello()\n        assert result1 == result2 == result3 == \"world\"\n    \n    # 异常用例\n    def test_hello_function_exists(self):\n        \"\"\"测试hello函数存在\"\"\"\n        assert callable(hello)\n    \n    def test_hello_no_parameters(self):\n        \"\"\"测试hello函数无需参数即可调用\"\"\"\n        result = hello()\n        assert result is not None\n    \n    def test_hello_return_not_none(self):\n        \"\"\"测试hello函数返回值不为None\"\"\"\n        result = hello()\n        assert result is not None\n    \n    def test_hello_no_exception(self):\n        \"\"\"测试hello函数调用不抛出异常\"\"\"\n        try:\n            hello()\n        except Exception as e:\n            pytest.fail(f\"hello() raised unexpected exception: {e}\")",
+      "target": "hello",
+      "test_type": "unit",
+      "generated_by": "llm",
+      "status": "generated"
+    },
+    {
+      "test_file_path": "tests/integration_test_handler.py",
+      "test_code": "import pytest\n\nclass TestIntegrationHello:\n    \"\"\"Integration tests for hello\"\"\"\n\n    def test_hello_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        pass\n\n    def test_hello_with_dependencies(self):\n        \"\"\"Test with dependency mocking\"\"\"\n        pass\n",
+      "target": "hello",
+      "test_type": "integration",
+      "status": "generated"
+    }
+  ],
+  "coverage": {
+    "total_lines": 1,
+    "covered_lines": 0,
+    "coverage_percent": 0.0,
+    "files_with_coverage": 1
+  },
+  "fc2_reference": {
+    "total_modifications": 1,
+    "successful": 1
+  },
+  "created_at": "2026-05-02T01:51:23.608552"
+}

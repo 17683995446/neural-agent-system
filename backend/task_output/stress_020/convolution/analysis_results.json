@@ -1,0 +1,76 @@
+{
+  "task_id": "stress_020",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "包含两个工具函数的模块：helper函数用于将输入值乘以2，format_output函数用于将输入转换为字符串并去除首尾空格",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\utils.py",
+      "task_id": "stress_020",
+      "analyzed_at": "2026-05-02T23:01:22.423555",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 5
+        },
+        {
+          "name": "validate_input",
+          "line": 12
+        },
+        {
+          "name": "DataHandler.__init__",
+          "line": 16
+        },
+        {
+          "name": "DataHandler.load",
+          "line": 20
+        },
+        {
+          "name": "DataHandler.transform",
+          "line": 23
+        },
+        {
+          "name": "DataHandler.save",
+          "line": 26
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 15
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理模块，包含数据转换和验证的辅助函数，以及DataHandler类用于数据加载、转换和保存操作。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_20_dfvvq6ma\\src\\handler.py",
+      "task_id": "stress_020",
+      "analyzed_at": "2026-05-02T23:01:27.955684",
+      "total_lines": 26,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 8,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T23:01:27.956624"
+}

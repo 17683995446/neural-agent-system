@@ -1,0 +1,97 @@
+{
+  "task_id": "stress_007",
+  "layer": "pooling",
+  "user_requirement": "实现缓存机制",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 4
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 12
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理工具模块，包含数据转换函数、输入验证函数，以及DataHandler类用于数据的加载、转换和保存操作。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\handler.py",
+      "task_id": "stress_007",
+      "analyzed_at": "2026-05-02T22:14:59.858335",
+      "total_lines": 26,
+      "analyzed_by": "llm",
+      "llm_summary": "代码分析结果中未发现与缓存机制直接相关的文件或函数。现有文件handler.py包含DataHandler类、process_data和validate_input函数，utils.py包含helper和format_output函数，这些均与缓存机制无关。如需实现缓存机制，建议新增专门的缓存管理模块。",
+      "compressed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "该文件包含两个工具函数，分别用于数值翻倍和去除字符串首尾空格。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\utils.py",
+      "task_id": "stress_007",
+      "analyzed_at": "2026-05-02T22:15:00.444851",
+      "total_lines": 3,
+      "analyzed_by": "llm",
+      "llm_summary": "代码分析结果中未发现与缓存机制直接相关的文件或函数。现有文件handler.py包含DataHandler类、process_data和validate_input函数，utils.py包含helper和format_output函数，这些均与缓存机制无关。如需实现缓存机制，建议新增专门的缓存管理模块。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 4,
+    "total_classes": 1,
+    "unique_imports": [
+      "from typing import Optional"
+    ],
+    "top_functions": [
+      {
+        "name": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\utils.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_7_nf6tl_52\\src\\handler.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 2,
+  "created_at": "2026-05-02T22:15:09.749739"
+}

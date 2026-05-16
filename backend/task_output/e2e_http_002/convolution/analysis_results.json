@@ -1,0 +1,94 @@
+{
+  "task_id": "e2e_http_002",
+  "layer": "convolution",
+  "total_files": 3,
+  "analyzed_files": [
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\e2e_repo_npg6ds5p\\src\\main.py",
+      "language": "unknown",
+      "total_lines": 14,
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 3
+        },
+        {
+          "name": "validate_input",
+          "line": 7
+        },
+        {
+          "name": "transform",
+          "line": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import os"
+      ],
+      "task_id": "e2e_http_002",
+      "analyzed_at": "2026-05-01T21:18:16.588470"
+    },
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\e2e_repo_npg6ds5p\\src\\models.py",
+      "language": "unknown",
+      "total_lines": 17,
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 5
+        },
+        {
+          "name": "to_dict",
+          "line": 9
+        },
+        {
+          "name": "__init__",
+          "line": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataModel",
+          "line": 3
+        },
+        {
+          "name": "ResultModel",
+          "line": 12
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "task_id": "e2e_http_002",
+      "analyzed_at": "2026-05-01T21:18:16.590626"
+    },
+    {
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\e2e_repo_npg6ds5p\\src\\utils.py",
+      "language": "unknown",
+      "total_lines": 12,
+      "functions": [
+        {
+          "name": "load_config",
+          "line": 4
+        },
+        {
+          "name": "setup_logger",
+          "line": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        "import json",
+        "import logging"
+      ],
+      "task_id": "e2e_http_002",
+      "analyzed_at": "2026-05-01T21:18:16.592893"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 8,
+    "total_classes": 2
+  },
+  "created_at": "2026-05-01T21:18:16.592922"
+}

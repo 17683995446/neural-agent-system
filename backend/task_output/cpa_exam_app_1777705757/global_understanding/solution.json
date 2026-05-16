@@ -1,0 +1,234 @@
+{
+  "task_id": "cpa_exam_app_1777705757",
+  "layer": "global_understanding",
+  "layer_name": "full_connect_1",
+  "solution": {
+    "overview": "本方案为全新构建的CPA考试刷题网页应用，采用HTML+CSS+JavaScript原生技术栈，数据使用JSON本地存储。方案涵盖数据模型设计、核心功能模块开发、用户界面实现、响应式布局及主题切换等功能点。",
+    "modification_list": [
+      {
+        "type": "data",
+        "target": "questions.json",
+        "file": "data/questions.json",
+        "line": null,
+        "action": "创建题目数据JSON文件，包含题目ID、科目、题型、题干、选项、正确答案、答案解析、知识点标签、难度系数等字段",
+        "priority": "high"
+      },
+      {
+        "type": "data",
+        "target": "users.json",
+        "file": "data/users.json",
+        "line": null,
+        "action": "创建用户数据JSON文件，包含用户ID、学习进度、错题记录、收藏记录、学习计划、答题历史等字段",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "QuestionBank",
+        "file": "js/questionbank.js",
+        "line": null,
+        "action": "创建题库管理类，包含加载题目、筛选题目、按科目/题型过滤、随机打乱、获取错题、获取收藏题等方法",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "UserManager",
+        "file": "js/usermanager.js",
+        "line": null,
+        "action": "创建用户管理类，包含用户登录/注册、学习进度保存、错题本管理、收藏夹管理、学习计划制定等方法",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "AnswerChecker",
+        "file": "js/answerchecker.js",
+        "line": null,
+        "action": "创建答题校验类，包含单选题校验、多选题校验、判断题校验、答案比对、解析生成等方法",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "Statistics",
+        "file": "js/statistics.js",
+        "line": null,
+        "action": "创建统计分析类，包含正确率计算、刷题数量统计、用时统计、薄弱知识点分析、进度图表生成等方法",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "ThemeManager",
+        "file": "js/thememanager.js",
+        "line": null,
+        "action": "创建主题管理类，包含深色/浅色主题切换、主题状态保存、主题样式动态加载等方法",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "initApp",
+        "file": "js/app.js",
+        "line": null,
+        "action": "创建应用初始化函数，包含DOM元素绑定、事件监听初始化、数据加载、界面渲染等",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "renderQuestion",
+        "file": "js/renderer.js",
+        "line": null,
+        "action": "创建题目渲染函数，支持单选题、多选题、判断题的UI展示，包含题干、选项按钮、提交按钮、答案解析显示区域",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "renderStatistics",
+        "file": "js/renderer.js",
+        "line": null,
+        "action": "创建统计面板渲染函数，显示正确率环形图、刷题数量柱状图、知识点掌握雷达图、用时统计等",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "renderWrongQuestions",
+        "file": "js/renderer.js",
+        "line": null,
+        "action": "创建错题本渲染函数，显示用户所有错题，支持重新作答、查看解析、移除错题等操作",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "renderFavorites",
+        "file": "js/renderer.js",
+        "line": null,
+        "action": "创建收藏夹渲染函数，显示用户收藏的题目，支持取消收藏、开始刷题等操作",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "renderStudyPlan",
+        "file": "js/renderer.js",
+        "line": null,
+        "action": "创建学习计划渲染函数，显示每日刷题目标、进度完成情况、学习提醒等",
+        "priority": "low"
+      },
+      {
+        "type": "function",
+        "target": "handleAnswer",
+        "file": "js/eventhandler.js",
+        "line": null,
+        "action": "创建答题事件处理函数，处理用户选择答案、提交答案、下一题切换、上一题返回等交互",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "handleNavigation",
+        "file": "js/eventhandler.js",
+        "line": null,
+        "action": "创建导航事件处理函数，处理科目切换、刷题模式切换、页面跳转等交互",
+        "priority": "high"
+      },
+      {
+        "type": "style",
+        "target": "main.css",
+        "file": "css/main.css",
+        "line": null,
+        "action": "创建主样式文件，包含基础布局、按钮样式、卡片样式、题目展示样式、响应式断点定义",
+        "priority": "high"
+      },
+      {
+        "type": "style",
+        "target": "theme.css",
+        "file": "css/theme.css",
+        "line": null,
+        "action": "创建主题样式文件，包含浅色主题变量定义（背景色、文字色、强调色等）",
+        "priority": "medium"
+      },
+      {
+        "type": "style",
+        "target": "dark-theme.css",
+        "file": "css/dark-theme.css",
+        "line": null,
+        "action": "创建深色主题样式文件，覆盖主题变量实现深色模式切换",
+        "priority": "medium"
+      },
+      {
+        "type": "html",
+        "target": "index.html",
+        "file": "index.html",
+        "line": null,
+        "action": "创建主页面HTML结构，包含顶部导航区、侧边栏（科目选择）、主内容区（题目展示/统计面板/错题本/收藏夹）、底部操作区",
+        "priority": "high"
+      },
+      {
+        "type": "function",
+        "target": "localStorage",
+        "file": "js/storage.js",
+        "line": null,
+        "action": "创建本地存储封装函数，实现用户数据、学习进度、答题记录的持久化存储和读取",
+        "priority": "high"
+      }
+    ],
+    "execution_order": [
+      "data:questions.json",
+      "data:users.json",
+      "html:index.html",
+      "style:main.css",
+      "style:theme.css",
+      "style:dark-theme.css",
+      "function:ThemeManager",
+      "function:QuestionBank",
+      "function:UserManager",
+      "function:AnswerChecker",
+      "function:Statistics",
+      "function:localStorage",
+      "function:renderQuestion",
+      "function:renderStatistics",
+      "function:renderWrongQuestions",
+      "function:renderFavorites",
+      "function:renderStudyPlan",
+      "function:handleAnswer",
+      "function:handleNavigation",
+      "function:initApp"
+    ],
+    "risk_points": [
+      {
+        "type": "数据存储",
+        "description": "使用localStorage存储大量题目数据和用户数据可能导致存储空间不足或性能问题",
+        "severity": "medium"
+      },
+      {
+        "type": "数据安全",
+        "description": "JSON数据明文存储在客户端，存在数据被篡改的风险，无法防止用户作弊",
+        "severity": "medium"
+      },
+      {
+        "type": "用户体验",
+        "description": "纯前端实现无法实现多设备数据同步，用户更换设备后学习进度丢失",
+        "severity": "low"
+      },
+      {
+        "type": "性能",
+        "description": "题目数据量大时（如超过10000题），前端筛选和渲染可能出现卡顿",
+        "severity": "low"
+      },
+      {
+        "type": "兼容性",
+        "description": "部分老旧浏览器可能不支持CSS变量主题切换功能",
+        "severity": "low"
+      }
+    ],
+    "similar_experiences_used": 0,
+    "architecture": {
+      "main_components": [],
+      "main_functions": [],
+      "entry_points": [],
+      "data_flow": {
+        "note": "Simplified data flow analysis",
+        "estimated_flows": 0
+      }
+    }
+  },
+  "pooling_reference": {
+    "total_files": 0,
+    "user_requirement": "实现一个CPA考试刷题网页应用，功能包括：\n1. 题目展示：支持单选题、多选题、判断题，每题显示题干、选项、答案解析\n2. 刷题模式：顺序刷题、随机刷题、错题重做、收藏题目\n3. 答题统计：正确率、刷题数量、用时统计、薄弱知识点分析\n4. 知识点分类：按会计、审计、财管、税法、经济法、战略六科分类\n5. 用户功能：学习进度保存、错题本、收藏夹、学习计划\n6. 界面要求：响应式设计，支持手机和PC端，深色/浅色主题切换\n7. 技术栈：HTML + CSS + JavaScript前端，数据用JSON存储"
+  },
+  "created_at": "2026-05-02T15:12:57.426369"
+}

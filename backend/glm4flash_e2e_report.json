@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-05-03T14:17:39.453748",
+  "model": "glm-4-flash",
+  "checks": [
+    {
+      "name": "LLMClient basic",
+      "ok": true,
+      "time": 0.89
+    },
+    {
+      "name": "CheapLLMClient",
+      "ok": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "content": "A Python web framework is Django. Django is a high-level web framework that encourages rapid development and clean, pragmatic design. It's known for its \"b",
+            "role": "assistant"
+          }
+        }
+      ],
+      "time": 1.8
+    },
+    {
+      "name": "AgentPool 10 agents",
+      "ok": true,
+      "time": 2.57,
+      "success_count": 10
+    },
+    {
+      "name": "20 concurrent calls",
+      "ok": true,
+      "time": 2.78,
+      "success_count": 20
+    },
+    {
+      "name": "JSON extraction",
+      "ok": true,
+      "time": 1.41
+    },
+    {
+      "name": "Code extraction",
+      "ok": true,
+      "time": 0.98
+    },
+    {
+      "name": "50-round stability",
+      "ok": true,
+      "time": 56.86
+    },
+    {
+      "name": "50 agents parallel",
+      "ok": true,
+      "time": 7.76,
+      "success_count": 50
+    }
+  ]
+}

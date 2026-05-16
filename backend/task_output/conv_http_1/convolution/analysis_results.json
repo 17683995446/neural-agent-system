@@ -1,0 +1,36 @@
+{
+  "task_id": "conv_http_1",
+  "layer": "convolution",
+  "total_files": 1,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "hello",
+          "line": 1
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "定义了一个名为hello的简单函数，该函数不执行任何操作（pass）",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmpo1xgaf83\\main.py",
+      "task_id": "conv_http_1",
+      "analyzed_at": "2026-05-03T08:25:01.690291",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 1,
+    "total_classes": 0
+  },
+  "created_at": "2026-05-03T08:25:01.690715",
+  "modules": [
+    {
+      "name": "root",
+      "file_count": 1,
+      "dependencies": []
+    }
+  ]
+}

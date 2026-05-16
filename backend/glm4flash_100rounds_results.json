@@ -1,0 +1,708 @@
+{
+  "timestamp": "2026-05-03T14:12:44.251252",
+  "model": "glm-4-flash",
+  "total": 100,
+  "success": 100,
+  "results": [
+    {
+      "idx": 1,
+      "success": true,
+      "elapsed": 1.51,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 2,
+      "success": true,
+      "elapsed": 0.53,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 3,
+      "success": true,
+      "elapsed": 1.0,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 4,
+      "success": true,
+      "elapsed": 0.53,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 5,
+      "success": true,
+      "elapsed": 0.49,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 6,
+      "success": true,
+      "elapsed": 0.47,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 7,
+      "success": true,
+      "elapsed": 0.82,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 8,
+      "success": true,
+      "elapsed": 0.82,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 9,
+      "success": true,
+      "elapsed": 0.57,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 10,
+      "success": true,
+      "elapsed": 0.97,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 11,
+      "success": true,
+      "elapsed": 1.85,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 12,
+      "success": true,
+      "elapsed": 0.89,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 13,
+      "success": true,
+      "elapsed": 0.82,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 14,
+      "success": true,
+      "elapsed": 0.81,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 15,
+      "success": true,
+      "elapsed": 0.81,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 16,
+      "success": true,
+      "elapsed": 0.81,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 17,
+      "success": true,
+      "elapsed": 0.84,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 18,
+      "success": true,
+      "elapsed": 1.41,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 19,
+      "success": true,
+      "elapsed": 0.49,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 20,
+      "success": true,
+      "elapsed": 0.54,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 21,
+      "success": true,
+      "elapsed": 0.53,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 22,
+      "success": true,
+      "elapsed": 0.53,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 23,
+      "success": true,
+      "elapsed": 0.53,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 24,
+      "success": true,
+      "elapsed": 0.53,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 25,
+      "success": true,
+      "elapsed": 1.04,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 26,
+      "success": true,
+      "elapsed": 0.61,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 27,
+      "success": true,
+      "elapsed": 0.92,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 28,
+      "success": true,
+      "elapsed": 1.33,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 29,
+      "success": true,
+      "elapsed": 0.61,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 30,
+      "success": true,
+      "elapsed": 0.92,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 31,
+      "success": true,
+      "elapsed": 0.66,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 32,
+      "success": true,
+      "elapsed": 0.89,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 33,
+      "success": true,
+      "elapsed": 0.52,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 34,
+      "success": true,
+      "elapsed": 0.54,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 35,
+      "success": true,
+      "elapsed": 0.54,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 36,
+      "success": true,
+      "elapsed": 0.41,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 37,
+      "success": true,
+      "elapsed": 0.51,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 38,
+      "success": true,
+      "elapsed": 0.85,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 39,
+      "success": true,
+      "elapsed": 0.5,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 40,
+      "success": true,
+      "elapsed": 0.59,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 41,
+      "success": true,
+      "elapsed": 1.14,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 42,
+      "success": true,
+      "elapsed": 0.51,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 43,
+      "success": true,
+      "elapsed": 0.51,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 44,
+      "success": true,
+      "elapsed": 2.67,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 45,
+      "success": true,
+      "elapsed": 0.51,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 46,
+      "success": true,
+      "elapsed": 0.92,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 47,
+      "success": true,
+      "elapsed": 0.61,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 48,
+      "success": true,
+      "elapsed": 0.63,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 49,
+      "success": true,
+      "elapsed": 0.62,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 50,
+      "success": true,
+      "elapsed": 0.72,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 51,
+      "success": true,
+      "elapsed": 0.76,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 52,
+      "success": true,
+      "elapsed": 0.59,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 53,
+      "success": true,
+      "elapsed": 0.54,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 54,
+      "success": true,
+      "elapsed": 0.55,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 55,
+      "success": true,
+      "elapsed": 0.69,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 56,
+      "success": true,
+      "elapsed": 1.08,
+      "tokens": 1,
+      "text_preview": "0"
+    },
+    {
+      "idx": 57,
+      "success": true,
+      "elapsed": 0.61,
+      "tokens": 1,
+      "text_preview": "1"
+    },
+    {
+      "idx": 58,
+      "success": true,
+      "elapsed": 0.47,
+      "tokens": 1,
+      "text_preview": "4"
+    },
+    {
+      "idx": 59,
+      "success": true,
+      "elapsed": 0.49,
+      "tokens": 1,
+      "text_preview": "9"
+    },
+    {
+      "idx": 60,
+      "success": true,
+      "elapsed": 0.59,
+      "tokens": 2,
+      "text_preview": "16"
+    },
+    {
+      "idx": 61,
+      "success": true,
+      "elapsed": 0.59,
+      "tokens": 6,
+      "text_preview": "Python"
+    },
+    {
+      "idx": 62,
+      "success": true,
+      "elapsed": 0.76,
+      "tokens": 35,
+      "text_preview": "One programming language is Python."
+    },
+    {
+      "idx": 63,
+      "success": true,
+      "elapsed": 3.56,
+      "tokens": 290,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 64,
+      "success": true,
+      "elapsed": 3.28,
+      "tokens": 344,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 65,
+      "success": true,
+      "elapsed": 2.97,
+      "tokens": 343,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 66,
+      "success": true,
+      "elapsed": 2.8,
+      "tokens": 298,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 67,
+      "success": true,
+      "elapsed": 2.92,
+      "tokens": 281,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 68,
+      "success": true,
+      "elapsed": 2.67,
+      "tokens": 268,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 69,
+      "success": true,
+      "elapsed": 2.67,
+      "tokens": 276,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 70,
+      "success": true,
+      "elapsed": 2.36,
+      "tokens": 271,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 71,
+      "success": true,
+      "elapsed": 2.27,
+      "tokens": 288,
+      "text_preview": "One programming language is Python. It's a high-level, inter"
+    },
+    {
+      "idx": 72,
+      "success": true,
+      "elapsed": 1.57,
+      "tokens": 238,
+      "text_preview": "One programming language is Python. It is known for its read"
+    },
+    {
+      "idx": 73,
+      "success": true,
+      "elapsed": 2.76,
+      "tokens": 298,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 74,
+      "success": true,
+      "elapsed": 2.07,
+      "tokens": 343,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 75,
+      "success": true,
+      "elapsed": 2.07,
+      "tokens": 171,
+      "text_preview": "One programming language is Python. It's known for its simpl"
+    },
+    {
+      "idx": 76,
+      "success": true,
+      "elapsed": 2.58,
+      "tokens": 312,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 77,
+      "success": true,
+      "elapsed": 2.31,
+      "tokens": 300,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 78,
+      "success": true,
+      "elapsed": 3.51,
+      "tokens": 294,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 79,
+      "success": true,
+      "elapsed": 2.58,
+      "tokens": 364,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 80,
+      "success": true,
+      "elapsed": 3.94,
+      "tokens": 341,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 81,
+      "success": true,
+      "elapsed": 2.13,
+      "tokens": 268,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 82,
+      "success": true,
+      "elapsed": 2.67,
+      "tokens": 301,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 83,
+      "success": true,
+      "elapsed": 2.74,
+      "tokens": 298,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 84,
+      "success": true,
+      "elapsed": 3.12,
+      "tokens": 350,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 85,
+      "success": true,
+      "elapsed": 2.74,
+      "tokens": 361,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 86,
+      "success": true,
+      "elapsed": 3.63,
+      "tokens": 303,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 87,
+      "success": true,
+      "elapsed": 2.12,
+      "tokens": 329,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 88,
+      "success": true,
+      "elapsed": 3.57,
+      "tokens": 328,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 89,
+      "success": true,
+      "elapsed": 1.79,
+      "tokens": 293,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 90,
+      "success": true,
+      "elapsed": 2.63,
+      "tokens": 349,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 91,
+      "success": true,
+      "elapsed": 2.33,
+      "tokens": 306,
+      "text_preview": "One programming language is Python. It is known for its read"
+    },
+    {
+      "idx": 92,
+      "success": true,
+      "elapsed": 2.59,
+      "tokens": 284,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 93,
+      "success": true,
+      "elapsed": 1.92,
+      "tokens": 254,
+      "text_preview": "One programming language is Python. It is a popular, high-le"
+    },
+    {
+      "idx": 94,
+      "success": true,
+      "elapsed": 3.92,
+      "tokens": 198,
+      "text_preview": "One programming language is Python. It is known for its simp"
+    },
+    {
+      "idx": 95,
+      "success": true,
+      "elapsed": 4.74,
+      "tokens": 325,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 96,
+      "success": true,
+      "elapsed": 3.11,
+      "tokens": 344,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 97,
+      "success": true,
+      "elapsed": 1.44,
+      "tokens": 251,
+      "text_preview": "One programming language is Python. It is known for its read"
+    },
+    {
+      "idx": 98,
+      "success": true,
+      "elapsed": 2.79,
+      "tokens": 268,
+      "text_preview": "One programming language is Python. It is a high-level, inte"
+    },
+    {
+      "idx": 99,
+      "success": true,
+      "elapsed": 3.3,
+      "tokens": 330,
+      "text_preview": "One programming language is Python. It is a widely-used, hig"
+    },
+    {
+      "idx": 100,
+      "success": true,
+      "elapsed": 1.59,
+      "tokens": 35,
+      "text_preview": "One programming language is Python."
+    }
+  ]
+}

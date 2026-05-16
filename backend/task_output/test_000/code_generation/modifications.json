@@ -1,0 +1,27 @@
+{
+  "task_id": "test_000",
+  "layer": "code_generation",
+  "layer_name": "full_connect_2",
+  "summary": {
+    "total_modifications": 1,
+    "successful": 1,
+    "failed": 0
+  },
+  "modifications": [
+    {
+      "original_code": "def hello(): return \"world\"",
+      "modified_code": "def hello() -> str:\n    return \"world\"",
+      "diff": "--- original\n+++ modified\n+def hello() -> str:\n+    return \"world\"",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\tmpotmhc4nk\\src\\handler.py",
+      "target": "hello",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 1,
+      "syntax_valid": true
+    }
+  ],
+  "fc1_reference": {
+    "solution_overview": "为hello函数添加类型注解，包括参数和返回值的类型声明"
+  },
+  "created_at": "2026-05-02T01:46:00.491151"
+}

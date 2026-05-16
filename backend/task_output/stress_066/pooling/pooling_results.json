@@ -1,0 +1,65 @@
+{
+  "task_id": "stress_066",
+  "layer": "pooling",
+  "user_requirement": "修复安全漏洞",
+  "compressed_features": [],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 8,
+    "total_classes": 1,
+    "unique_imports": [
+      "from typing import Optional"
+    ],
+    "top_functions": [
+      {
+        "name": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "__init__",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "load",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "transform",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "save",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\utils.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_66_cqydq_ee\\src\\handler.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 0,
+  "created_at": "2026-05-02T23:33:26.742459"
+}

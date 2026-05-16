@@ -1,0 +1,161 @@
+{
+  "task_id": "cpa_quick_1777706435",
+  "layer": "global_understanding",
+  "layer_name": "full_connect_1",
+  "solution": {
+    "overview": "CPA考试刷题网页应用开发方案，从零构建完整的单页应用架构，包含首页科目选择、刷题页面（支持单选/多选/判断）、统计页面、主题切换及响应式布局，所有数据通过JSON本地存储管理",
+    "modification_list": [
+      {
+        "type": "file",
+        "target": "data/questions.json",
+        "file": "data/questions.json",
+        "line": null,
+        "action": "创建题库JSON数据文件，包含科目分类（会计、审计、财管、税法、经济法、战略）及题目数据结构（id, type, question, options, answer, subject）",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "index.html",
+        "file": "index.html",
+        "line": null,
+        "action": "创建首页HTML，包含CPA六科目选择按钮、顶部导航栏（主题切换按钮）、页面标题和简介，使用语义化标签和可访问性设计",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "practice.html",
+        "file": "practice.html",
+        "line": null,
+        "action": "创建刷题页面，包含题目显示区域、选项按钮（单选/多选/判断样式）、提交按钮、进度指示器、上一题/下一题导航",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "stats.html",
+        "file": "stats.html",
+        "line": null,
+        "action": "创建统计页面，包含总体正确率饼图、各科目正确率柱状图、错题列表、练习记录时间线，使用Canvas或CSS实现图表",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "css/styles.css",
+        "file": "css/styles.css",
+        "line": null,
+        "action": "创建基础样式文件，包含全局重置、布局系统、组件样式（按钮、卡片、进度条）、响应式断点（320px/768px/1024px）",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "css/theme.css",
+        "file": "css/theme.css",
+        "line": null,
+        "action": "创建主题样式文件，定义浅色主题（--bg-primary: #ffffff, --text-primary: #333333）和深色主题（--bg-primary: #1a1a1a, --text-primary: #e0e0e0）CSS变量",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "js/storage.js",
+        "file": "js/storage.js",
+        "line": null,
+        "action": "创建数据存储模块，包含loadQuestions()加载题库、saveProgress()保存进度、loadProgress()读取进度、clearProgress()清除数据，使用localStorage",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "js/theme.js",
+        "file": "js/theme.js",
+        "line": null,
+        "action": "创建主题管理模块，包含initTheme()初始化主题、toggleTheme()切换主题、saveTheme()保存主题偏好，使用CSS变量和localStorage",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "js/practice.js",
+        "file": "js/practice.js",
+        "line": null,
+        "action": "创建刷题核心逻辑，包含renderQuestion()渲染题目、handleAnswer()处理答题、checkAnswer()验证答案、nextQuestion()/prevQuestion()导航、calculateScore()计算分数",
+        "priority": "high"
+      },
+      {
+        "type": "file",
+        "target": "js/stats.js",
+        "file": "js/stats.js",
+        "line": null,
+        "action": "创建统计模块，包含calculateAccuracy()计算正确率、renderCharts()渲染图表、renderWrongQuestions()展示错题、exportData()导出数据",
+        "priority": "medium"
+      },
+      {
+        "type": "file",
+        "target": "js/router.js",
+        "file": "js/router.js",
+        "line": null,
+        "action": "创建简单路由模块，处理页面跳转和URL参数（subject参数传递科目），实现单页应用体验",
+        "priority": "medium"
+      },
+      {
+        "type": "function",
+        "target": "responsiveInit",
+        "file": "js/theme.js",
+        "line": null,
+        "action": "添加响应式初始化函数，检测屏幕宽度并调整布局，处理横竖屏切换和触摸设备优化",
+        "priority": "medium"
+      }
+    ],
+    "execution_order": [
+      "file:data/questions.json",
+      "file:css/theme.css",
+      "file:css/styles.css",
+      "file:js/storage.js",
+      "file:js/theme.js",
+      "file:js/router.js",
+      "file:js/practice.js",
+      "file:js/stats.js",
+      "file:index.html",
+      "file:practice.html",
+      "file:stats.html"
+    ],
+    "risk_points": [
+      {
+        "type": "数据持久化",
+        "description": "localStorage容量有限（通常5MB），大量题目和记录可能导致存储失败，需添加存储空间检测和清理机制",
+        "severity": "medium"
+      },
+      {
+        "type": "多选题逻辑",
+        "description": "多选题答案比对需要考虑选项顺序无关性，需使用数组排序后比较，避免用户顺序不同导致误判",
+        "severity": "medium"
+      },
+      {
+        "type": "主题切换闪烁",
+        "description": "页面加载时可能出现主题闪烁（FOUC），需在HTML头部添加内联主题样式或使用CSS媒体查询优先",
+        "severity": "low"
+      },
+      {
+        "type": "响应式兼容性",
+        "description": "不同移动设备屏幕尺寸差异大，需在多分辨率设备上测试，特别是iOS Safari和Android Chrome",
+        "severity": "medium"
+      },
+      {
+        "type": "数据安全",
+        "description": "JSON数据存储在客户端，用户可修改localStorage数据，需添加数据校验机制防止作弊",
+        "severity": "low"
+      }
+    ],
+    "similar_experiences_used": 0,
+    "architecture": {
+      "main_components": [],
+      "main_functions": [],
+      "entry_points": [],
+      "data_flow": {
+        "note": "Simplified data flow analysis",
+        "estimated_flows": 0
+      }
+    }
+  },
+  "pooling_reference": {
+    "total_files": 0,
+    "user_requirement": "实现CPA考试刷题网页：1)HTML首页含科目选择 2)刷题页面支持单选/多选/判断题 3)统计页面显示正确率 4)深色浅色主题切换 5)响应式布局。技术栈HTML+CSS+JS，数据JSON存储"
+  },
+  "created_at": "2026-05-02T15:22:06.912486"
+}

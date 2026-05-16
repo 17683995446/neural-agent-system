@@ -1,0 +1,72 @@
+{
+  "task_id": "stress_010",
+  "layer": "convolution",
+  "total_files": 2,
+  "analyzed_files": [
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 5
+        },
+        {
+          "name": "validate_input",
+          "line": 9
+        },
+        {
+          "name": "load",
+          "line": 14
+        },
+        {
+          "name": "transform",
+          "line": 17
+        },
+        {
+          "name": "save",
+          "line": 20
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 12
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "该文件包含数据处理功能，包括字符串转大写的process_data函数和输入验证函数validate_input，以及DataHandler类用于数据加载、转换和保存操作。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "task_id": "stress_010",
+      "analyzed_at": "2026-05-02T22:26:47.754814",
+      "total_lines": 26,
+      "analyzed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "helper",
+          "line": 1
+        },
+        {
+          "name": "format_output",
+          "line": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "提供两个工具函数：helper 将数值乘以 2，format_output 去除字符串前后空白并返回其字符串形式。",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\utils.py",
+      "task_id": "stress_010",
+      "analyzed_at": "2026-05-02T22:26:49.745005",
+      "total_lines": 3,
+      "analyzed_by": "llm"
+    }
+  ],
+  "failed_files": [],
+  "summary": {
+    "total_functions": 7,
+    "total_classes": 1
+  },
+  "created_at": "2026-05-02T22:26:49.746551"
+}

@@ -1,0 +1,88 @@
+{
+  "task_id": "e2e_test_001",
+  "layer": "pooling",
+  "user_requirement": "Add error handling to all functions",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "hello",
+          "line": 1
+        },
+        {
+          "name": "add",
+          "line": 5
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "summary": "这是一个简单的工具模块，提供了两个基础函数：hello函数返回问候语，add函数实现两个数的加法运算",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\test_repo_8w8gbd3w\\src\\main.py",
+      "task_id": "e2e_test_001",
+      "analyzed_at": "2026-05-02T01:21:44.698574",
+      "total_lines": 6,
+      "analyzed_by": "llm",
+      "llm_summary": "需要在main.py的hello和add函数，以及utils.py的validate函数中添加错误处理机制，确保所有函数都能正确捕获和处理异常情况。",
+      "compressed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "validate",
+          "line": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "Helper",
+          "line": 6
+        }
+      ],
+      "imports": [
+        "import os"
+      ],
+      "summary": "文件包含一个验证函数validate用于判断数据是否存在，以及一个Helper辅助类，其中包含process方法用于处理业务逻辑",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\test_repo_8w8gbd3w\\src\\utils.py",
+      "task_id": "e2e_test_001",
+      "analyzed_at": "2026-05-02T01:21:57.122967",
+      "total_lines": 9,
+      "analyzed_by": "llm",
+      "llm_summary": "需要在main.py的hello和add函数，以及utils.py的validate函数中添加错误处理机制，确保所有函数都能正确捕获和处理异常情况。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 3,
+    "total_classes": 1,
+    "unique_imports": [
+      "import os"
+    ],
+    "top_functions": [
+      {
+        "name": "hello",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\test_repo_8w8gbd3w\\src\\main.py",
+        "line": null
+      },
+      {
+        "name": "add",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\test_repo_8w8gbd3w\\src\\main.py",
+        "line": null
+      },
+      {
+        "name": "validate",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\test_repo_8w8gbd3w\\src\\utils.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "Helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\test_repo_8w8gbd3w\\src\\utils.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 2,
+  "created_at": "2026-05-02T01:22:05.795054"
+}

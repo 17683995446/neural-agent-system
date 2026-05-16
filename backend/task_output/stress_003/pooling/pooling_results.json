@@ -1,0 +1,75 @@
+{
+  "task_id": "stress_003",
+  "layer": "pooling",
+  "user_requirement": "添加输入验证",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "process_data",
+          "line": 6
+        },
+        {
+          "name": "validate_input",
+          "line": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataHandler",
+          "line": 13
+        }
+      ],
+      "imports": [
+        "from typing import Optional"
+      ],
+      "summary": "数据处理工具模块，包含独立的process_data和validate_input函数，以及DataHandler类用于数据的加载、转换和保存操作",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_3_4c6uwypr\\src\\handler.py",
+      "task_id": "stress_003",
+      "analyzed_at": "2026-05-02T21:56:59.483288",
+      "total_lines": 26,
+      "analyzed_by": "llm",
+      "llm_summary": "handler.py中的validate_input函数和DataHandler类是与输入验证需求最相关的核心组件，process_data函数可能需要依赖验证逻辑。建议在validate_input函数中添加输入验证规则，并在DataHandler类中实现完整的验证机制。",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 2,
+    "total_functions": 4,
+    "total_classes": 1,
+    "unique_imports": [
+      "from typing import Optional"
+    ],
+    "top_functions": [
+      {
+        "name": "process_data",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_3_4c6uwypr\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "validate_input",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_3_4c6uwypr\\src\\handler.py",
+        "line": null
+      },
+      {
+        "name": "helper",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_3_4c6uwypr\\src\\utils.py",
+        "line": null
+      },
+      {
+        "name": "format_output",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_3_4c6uwypr\\src\\utils.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "DataHandler",
+        "file": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_3_4c6uwypr\\src\\handler.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 1,
+  "created_at": "2026-05-02T21:57:06.940194"
+}

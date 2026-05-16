@@ -1,0 +1,239 @@
+{
+  "task_id": "full_verify_1777699320",
+  "layer": "pooling",
+  "user_requirement": "Add error handling to the config module",
+  "compressed_features": [
+    {
+      "functions": [
+        {
+          "name": "get_settings",
+          "line": 44
+        }
+      ],
+      "classes": [
+        {
+          "name": "Settings",
+          "line": 9
+        }
+      ],
+      "imports": [
+        "from pydantic_settings import BaseSettings, SettingsConfigDict",
+        "from typing import Optional",
+        "from functools import lru_cache"
+      ],
+      "summary": "配置管理模块，使用Pydantic Settings定义Neural Agent系统的配置类，包含应用设置、API设置、Redis/PostgreSQL/RabbitMQ/Milvus连接设置、LLM模型设置（Anthropic/LiteLLM/OpenAI）、任务设置、信任值设置和CORS设置。提供@lru_cache装饰的get_settings()函数用于获取配置实例。",
+      "file_path": "app\\core\\config.py",
+      "task_id": "full_verify_1777699320",
+      "analyzed_at": "2026-05-02T13:22:18.021986",
+      "total_lines": 61,
+      "analyzed_by": "llm",
+      "llm_summary": "config模块包含Settings类和get_settings函数，需要添加错误处理，建议在get_settings函数中添加异常捕获处理配置加载失败的情况",
+      "compressed_by": "llm"
+    },
+    {
+      "functions": [
+        {
+          "name": "get_settings",
+          "line": 36
+        }
+      ],
+      "classes": [
+        {
+          "name": "Settings",
+          "line": 10
+        }
+      ],
+      "imports": [
+        "from typing import Optional",
+        "from pydantic_settings import BaseSettings",
+        "from functools import lru_cache"
+      ],
+      "summary": "应用程序配置文件，使用Pydantic BaseSettings管理应用配置，支持从环境变量和.env文件加载配置，包含应用信息、数据库、安全、CORS和API等设置项，并提供带缓存的Settings单例获取函数。",
+      "file_path": "app\\core\\app\\core\\config.py",
+      "task_id": "full_verify_1777699320",
+      "analyzed_at": "2026-05-02T13:22:23.373066",
+      "total_lines": 42,
+      "analyzed_by": "llm",
+      "llm_summary": "config模块包含Settings类和get_settings函数，需要添加错误处理，建议在get_settings函数中添加异常捕获处理配置加载失败的情况",
+      "compressed_by": "llm"
+    }
+  ],
+  "global_features": {
+    "total_files": 13,
+    "total_functions": 50,
+    "total_classes": 7,
+    "unique_imports": [
+      "import json",
+      "import requests",
+      "from typing import Any, Optional",
+      "import random",
+      "import threading",
+      "from pydantic import BaseModel, ValidationError",
+      "from app.core.logging import logger",
+      "from pydantic_settings import BaseSettings, SettingsConfigDict",
+      "import ray (conditional)",
+      "from typing import Optional, Dict, Any, List",
+      "from typing import Any, Optional, Type",
+      "from logging.handlers import RotatingFileHandler",
+      "from functools import lru_cache",
+      "from pydantic_settings import BaseSettings",
+      "from pathlib import Path",
+      "from celery import Celery",
+      "from typing import Optional",
+      "import numpy as np",
+      "import logging",
+      "from app.models.database import SessionLocal, TaskModel",
+      "import sys",
+      "from app.models.schemas import TaskStatus",
+      "from app.agents.trust.backward import BackwardPropagation",
+      "from app.core.config import settings",
+      "from typing import Optional, List, Dict, Any",
+      "import time",
+      "from celery.signals import worker_ready, worker_shutdown",
+      "from typing import Dict, Any, Optional",
+      "import re",
+      "import asyncio"
+    ],
+    "top_functions": [
+      {
+        "name": "extract_json_from_llm_response",
+        "file": "app\\core\\app\\core\\llm_utils.py",
+        "line": null
+      },
+      {
+        "name": "get_settings",
+        "file": "app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "debug_task",
+        "file": "app\\core\\app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "get_settings",
+        "file": "app\\core\\app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "exponential_backoff",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "_estimate_cost",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "_update_usage",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "_make_request",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "on_worker_ready",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "on_worker_shutdown",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "dispatch_agent_task",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "process_pipeline",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_convolution",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_pooling",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_fullconnect",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_output",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "_handle_backward",
+        "file": "app\\core\\worker.py",
+        "line": null
+      },
+      {
+        "name": "__init__",
+        "file": "app\\core\\app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "_get_session",
+        "file": "app\\core\\app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "chat",
+        "file": "app\\core\\app\\core\\llm_client.py",
+        "line": null
+      }
+    ],
+    "top_classes": [
+      {
+        "name": "Settings",
+        "file": "app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "Settings",
+        "file": "app\\core\\app\\core\\config.py",
+        "line": null
+      },
+      {
+        "name": "LLMClient",
+        "file": "app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "LLMClient",
+        "file": "app\\core\\app\\core\\llm_client.py",
+        "line": null
+      },
+      {
+        "name": "RLTrainer",
+        "file": "app\\core\\app\\core\\app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "RLTrainer",
+        "file": "app\\core\\app\\core\\rl_trainer.py",
+        "line": null
+      },
+      {
+        "name": "RLTrainer",
+        "file": "app\\core\\rl_trainer.py",
+        "line": null
+      }
+    ]
+  },
+  "total_files_processed": 2,
+  "created_at": "2026-05-02T13:22:35.888970"
+}

@@ -1,0 +1,104 @@
+{
+  "task_id": "stress_010",
+  "layer": "code_generation",
+  "layer_name": "full_connect_2",
+  "summary": {
+    "total_modifications": 8,
+    "successful": 8,
+    "failed": 0
+  },
+  "modifications": [
+    {
+      "original_code": "def helper(x): return x * 2\ndef format_output(s): return str(s).strip()\n",
+      "modified_code": "def helper(x: int) -> int:\n    return x * 2\n\ndef format_output(s: str) -> str:\n    return str(s).strip()",
+      "diff": "--- original\n+++ modified\n@@ -1,2 +1,5 @@\n-def helper(x): return x * 2\n\n-def format_output(s): return str(s).strip()\n\n+def helper(x: int) -> int:\n\n+    return x * 2\n\n+\n\n+def format_output(s: str) -> str:\n\n+    return str(s).strip()",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\utils.py",
+      "target": "helper",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 1,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "from typing import Optional, Callable, Any\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func: Callable[[Any], Any]) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True",
+      "diff": "--- original\n+++ modified\n@@ -1,5 +1,4 @@\n-\n\n-from typing import Optional\n\n+from typing import Optional, Callable, Any\n\n \n\n def process_data(data: dict) -> dict:\n\n     result = {}\n\n@@ -18,8 +17,8 @@\n     def load(self) -> bool:\n\n         return True\n\n \n\n-    def transform(self, func) -> dict:\n\n+    def transform(self, func: Callable[[Any], Any]) -> dict:\n\n         return {k: func(v) for k, v in self.data.items()}\n\n \n\n     def save(self, path: str) -> bool:\n\n-        return True\n\n+        return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "target": "transform",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 6,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "def helper(x): return x * 2\ndef format_output(s): return str(s).strip()\n",
+      "modified_code": "def helper(x): return x * 2\ndef format_output(s: object) -> str:\n    return str(s).strip()",
+      "diff": "--- original\n+++ modified\n@@ -1,2 +1,3 @@\n def helper(x): return x * 2\n\n-def format_output(s): return str(s).strip()\n\n+def format_output(s: object) -> str:\n\n+    return str(s).strip()",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\utils.py",
+      "target": "format_output",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 2,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "from typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True",
+      "diff": "--- original\n+++ modified\n@@ -1,4 +1,3 @@\n-\n\n from typing import Optional\n\n \n\n def process_data(data: dict) -> dict:\n\n@@ -22,4 +21,4 @@\n         return {k: func(v) for k, v in self.data.items()}\n\n \n\n     def save(self, path: str) -> bool:\n\n-        return True\n\n+        return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "target": "validate_input",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 4,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "from typing import Dict, Any, Callable, Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str) -> None:\n        self.source: str = source\n        self.data: Dict[str, Any] = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func: Callable[[Any], Any]) -> Dict[str, Any]:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True",
+      "diff": "--- original\n+++ modified\n@@ -1,5 +1,4 @@\n-\n\n-from typing import Optional\n\n+from typing import Dict, Any, Callable, Optional\n\n \n\n def process_data(data: dict) -> dict:\n\n     result = {}\n\n@@ -11,15 +10,15 @@\n     return len(value) > 0\n\n \n\n class DataHandler:\n\n-    def __init__(self, source: str):\n\n-        self.source = source\n\n-        self.data = {}\n\n+    def __init__(self, source: str) -> None:\n\n+        self.source: str = source\n\n+        self.data: Dict[str, Any] = {}\n\n \n\n     def load(self) -> bool:\n\n         return True\n\n \n\n-    def transform(self, func) -> dict:\n\n+    def transform(self, func: Callable[[Any], Any]) -> Dict[str, Any]:\n\n         return {k: func(v) for k, v in self.data.items()}\n\n \n\n     def save(self, path: str) -> bool:\n\n-        return True\n\n+        return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "target": "DataHandler",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 3,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "from typing import Dict, Any\n\ndef process_data(data: Dict[str, Any]) -> Dict[str, str]:\n    result: Dict[str, str] = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func):\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True",
+      "diff": "--- original\n+++ modified\n@@ -1,8 +1,7 @@\n+from typing import Dict, Any\n\n \n\n-from typing import Optional\n\n-\n\n-def process_data(data: dict) -> dict:\n\n-    result = {}\n\n+def process_data(data: Dict[str, Any]) -> Dict[str, str]:\n\n+    result: Dict[str, str] = {}\n\n     for key, value in data.items():\n\n         result[key] = str(value).upper()\n\n     return result\n\n@@ -18,8 +17,8 @@\n     def load(self) -> bool:\n\n         return True\n\n \n\n-    def transform(self, func) -> dict:\n\n+    def transform(self, func):\n\n         return {k: func(v) for k, v in self.data.items()}\n\n \n\n     def save(self, path: str) -> bool:\n\n-        return True\n\n+        return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "target": "process_data",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 7,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "from __future__ import annotations\n\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str) -> None:\n        self.source = source\n        self.data = {}\n\n    def load(self: DataHandler) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self, path: str) -> bool:\n        return True",
+      "diff": "--- original\n+++ modified\n@@ -1,3 +1,4 @@\n+from __future__ import annotations\n\n \n\n from typing import Optional\n\n \n\n@@ -11,15 +12,15 @@\n     return len(value) > 0\n\n \n\n class DataHandler:\n\n-    def __init__(self, source: str):\n\n+    def __init__(self, source: str) -> None:\n\n         self.source = source\n\n         self.data = {}\n\n \n\n-    def load(self) -> bool:\n\n+    def load(self: DataHandler) -> bool:\n\n         return True\n\n \n\n     def transform(self, func) -> dict:\n\n         return {k: func(v) for k, v in self.data.items()}\n\n \n\n     def save(self, path: str) -> bool:\n\n-        return True\n\n+        return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "target": "load",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 5,
+      "syntax_valid": true
+    },
+    {
+      "original_code": "\nfrom typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()",
+      "modified_code": "from typing import Optional\n\ndef process_data(data: dict) -> dict:\n    result = {}\n    for key, value in data.items():\n        result[key] = str(value).upper()\n    return result\n\ndef validate_input(value: str) -> bool:\n    return len(value) > 0\n\nclass DataHandler:\n    def __init__(self, source: str):\n        self.source = source\n        self.data = {}\n\n    def load(self) -> bool:\n        return True\n\n    def transform(self, func) -> dict:\n        return {k: func(v) for k, v in self.data.items()}\n\n    def save(self: 'DataHandler', path: str) -> bool:\n        return True",
+      "diff": "--- original\n+++ modified\n@@ -1,4 +1,3 @@\n-\n\n from typing import Optional\n\n \n\n def process_data(data: dict) -> dict:\n\n@@ -21,5 +20,5 @@\n     def transform(self, func) -> dict:\n\n         return {k: func(v) for k, v in self.data.items()}\n\n \n\n-    def save(self, path: str) -> bool:\n\n-        return True\n\n+    def save(self: 'DataHandler', path: str) -> bool:\n\n+        return True",
+      "file_path": "C:\\Users\\23583\\AppData\\Local\\Temp\\stress_10_vpsq0ahl\\src\\handler.py",
+      "target": "save",
+      "generated_by": "llm",
+      "status": "success",
+      "execution_order": 8,
+      "syntax_valid": true
+    }
+  ],
+  "fc1_reference": {
+    "solution_overview": "为src目录下的handler.py和utils.py中所有函数及DataHandler类添加完整的类型注解，包括参数类型和返回类型。类型注解将提高代码的可读性和可维护性，便于IDE支持和静态类型检查。"
+  },
+  "created_at": "2026-05-02T22:27:57.207673"
+}
