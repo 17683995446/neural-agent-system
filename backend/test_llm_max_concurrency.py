@@ -21,7 +21,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-SILICONFLOW_API_KEY = "sk-uqelhavcdhfxjzjesdenxpbtqombamjniazzjtbssmdcwdvg"
+SILICONFLOW_API_KEY = "REDACTED_API_KEY"
 SILICONFLOW_BASE = "https://api.siliconflow.cn/v1/chat/completions"
 
 MODELS = {
